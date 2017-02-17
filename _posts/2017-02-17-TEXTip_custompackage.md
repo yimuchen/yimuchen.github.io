@@ -198,3 +198,4 @@ I have been using self defined short-hands for a while. Here are some that I thi
 
 * Defining custom commands: https://en.wikibooks.org/wiki/LaTeX/Macros
 * Input command: https://en.wikibooks.org/wiki/LaTeX/Modular_Documents
+* Writing your own package: https://en.wikibooks.org/wiki/LaTeX/Creating_Packages
