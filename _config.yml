@@ -1,4 +1,4 @@
-title:            ENSC Doodles 
+title:            ENSC Doodles
 description:      Writing down various notes and thoughts picked up
 reading_time:     true
 words_per_minute: 200
@@ -36,7 +36,7 @@ bing_verify:
 timezone:    Asia/Taipei
 future:      true
 highlighter: rouge
-markdown:    kramdown
+markdown:    redcarpet
 gems:
   - jekyll-sitemap
   - jekyll-paginate
@@ -53,17 +53,9 @@ paginate: 5
 kramdown:
    input: GFM
    hard_wrap: false
-   footnote_nr: 1
    entity_output: as_char
-   toc_levels: 1..6
    no_fenced_code_blocks: true
-   enable_coderay: true
-   coderay:
-      coderay_line_numbers: nil
-      coderay_line_numbers_start: 1
-      coderay_tab_width: 4
-      coderay_bold_every: 10
-      coderay_css: class
+   line_numbers: false
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

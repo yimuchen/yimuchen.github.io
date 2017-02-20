@@ -134,27 +134,30 @@ or even worse:
 doesn't feel elegant. Can you get get latex to find the file for you? The answer is yes! Rename the file `mathcommands.sty`, and put it in the directory:
 
 ```
-/home/<username>/texmf/tex/latex/mathcommand.sty # Unix
-C:User\<username>\tex\latex\custom.sty           # Windows
+/home/<username>/texmf/tex/latex/mathcommands.sty # Unix
+C:User\<username>\tex\latex\mathhcommands.sty     # Windows
 ```
 
 And in your latex file, instead of the `\input` command. Use the `\usepackage` command before the beginning of the document body:
 
-```
+```tex
 \usepackage{mathcommand} % No extention!
 \begin{document}
 I can use \pd{x}{y} anywhere in the document!
 \end{document}
 ```
 
-Latex packages are of course more than more than a collection of custom commands, you can read about it more on the dedicated wikibook page on [packages](https://en.wikibooks.org/wiki/LaTeX/Creating_Packages).
+Latex packages are of course more than more than a collection of custom commands, you can read about it more on the dedicated wikibook page on [packages](https://en.wikibooks.org/wiki/LaTeX/Creating_Packages). Of course if you consider a user wide `.sty` file overkill, the `.sty` file be used in a single project folder too.
 
+
+## Caveats of storing file in commands.
+On major problem about using file to store custom commands is that to share the latex code with someone, you can no longer just share the snippet you are using, but you have to share all the file that contains custom commands as well. Depending on the scale of you collaboration, this may or may not be a problem. With the raise of cloud editing platforms such as [sharelatex](https://www.sharelatex.com/), this pain could be reduced without needing to go all out and host a git repositoy for you tex projects.
 
 ## Examples of math short-hands
 
 I have been using self defined short-hands for a while. Here are some that I think is good enough to help you get started on making you own. My full repository could be found on my [github repository](https://github.com/enochnotsocool/UnixConfig/blob/master/TexSettings/mathHashing.sty)
 
-```
+```tex
 % Defining braces
 \newcommand{\enc}[1]{\ensuremath{\left( #1 \right)}}
 \newcommand{\encsq}[1]{\ensuremath{\left[ #1 \right] }}
@@ -190,9 +193,6 @@ I have been using self defined short-hands for a while. Here are some that I thi
 %% Functions
 \newcommand{\abs}[1]{\ensuremath{\left| #1 \right|}}
 ```
-
-
-
 
 ## List of useful documentations:
 
