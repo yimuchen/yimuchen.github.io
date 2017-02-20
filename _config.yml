@@ -36,7 +36,7 @@ bing_verify:
 timezone:    Asia/Taipei
 future:      true
 highlighter: rouge
-markdown:    redcarpet
+markdown:    kramdown
 gems:
   - jekyll-sitemap
   - jekyll-paginate
