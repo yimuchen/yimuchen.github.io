@@ -41,7 +41,7 @@ and in you actual equation, we would only need to type:
 To produce the same output! One obvious merit of this that the equation in the tex file is a lot easier to read and write. Another merit is that suppose one day, you realized that you don't want the fraction form of the partial derivatives but the inline form:
 
 $$
-\partial_x f + \partial_y f = \partial_z f
+\partial_{x} f + \partial_{y} f = \partial_{z} f
 $$
 
 All you will need to to is to change the command you have defined to be something like:
