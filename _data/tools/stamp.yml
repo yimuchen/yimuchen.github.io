@@ -1,0 +1,16 @@
+known:
+  - value: 1
+    state: unchecked
+    image: "http://www.post.gov.tw/post/FileCenter/post_ww2/stamp_pic/stamp_bpic/A142_01.jpg"
+  - value: 3
+    state: checked
+    image: "http://www.post.gov.tw/post/FileCenter/post_ww2/stamp_pic/stamp_bpic/A142IV_05.jpg"
+  - value: 5
+    state: checked
+    image: "http://www.post.gov.tw/post/FileCenter/post_ww2/stamp_pic/stamp_bpic/A142_03.jpg"
+  - value: 6
+    state: unchecked
+    image: "http://www.post.gov.tw/post/FileCenter/post_ww2/stamp_pic/stamp_bpic/A142IV_06.jpg"
+  - value: 25
+    state: checked
+    image: "http://lh6.ggpht.com/-z7nMFGOP3kU/TvGDIkp61zI/AAAAAAAAASg/bWnjrKASrmU/q%2525C3%2525B8I_thumb.jpg"

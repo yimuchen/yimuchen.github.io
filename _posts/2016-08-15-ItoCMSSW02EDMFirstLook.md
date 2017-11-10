@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Look at the EDM file format
+title: Introduction to CMSSW part II - First Look at the EDM file format
 description: Understanding how to read and analyze the contents of an EDM file
 tags: [edm, c++, analysis]
 modified: 2016-08-15
@@ -9,16 +9,17 @@ image:
   credit: ensc
 ---
 
-In high energy physics, what we typically analysis is a list of events, extract what we deem useful from each event to compute physical variables like coupling strengths, production cross sections and such. But what variables in an event are deemed useful varies greatly from analysis to analysis. The Event Data Model format is a core backbone to the CMS software suite, giving great flexibility to the user to define an event by the variables they are interested in. Here we are first going to look at how you could look into the contents of a EDM file, looping through the events yourself.
+In high energy physics, what we typically analysis is a list of events, extract what we deem useful from each event to compute physical variables like coupling strengths, production cross sections and such. But what variables in an event are deemed useful varies greatly from analysis to analysis. The *Event Data Model(EDM)* format is a core backbone to the CMS software suite, giving great flexibility to the user to define an event by the variables they are interested in. From the official "tiers" that include raw electronics data collected at the CMS, general usage physical objects like electrons and jets made from the official reconstruction algorithms, to user-made EDM files where the property of the event is condensed down to a single `double` variable of interested to a analysis. Getting familiar with how to operator on `EDM` files is a first step on getting started with analysis at CMS.
 
-
-## Seeing what is available in an file
-The `EDM` files varies from user to user. There are official "tiers" that contain a general list of physical "objects" that annalists are typically interested. And there could be user-made EDM files, where the property of the event is condensed down to a single `double` variable of interested. We are going to provide a dummy `EDM` file [here](https://drive.google.com/open?id=0Bw8_U9a0g9nHUkg1eU1ZVEh0TTQ) to use as an example, and give instruction to find official EDM files that you should be able to get is you have access to a CMSSW environment.
+## Reading the contents of a `EDM` file
+We are going to provide a dummy `EDM` file [here](https://drive.google.com/open?id=0Bw8_U9a0g9nHUkg1eU1ZVEh0TTQ) to use as an example, and give instruction to find official `EDM` files that you should be able to get is you have access to a CMSSW environment.
 
 As always, move to a `CMSSW/src` directory and load the environment by `cmsenv`. To look what is variables are available in each event, run the command
+
 ```
 edmDumpEventContent  yourfile.root
 ```
+
 You should get an output like
 
 ```
@@ -48,34 +49,37 @@ unsigned int                          "bunchSpacingProducer"      ""            
 ```
 where you could see what look to be like physical objects.
 
-To read this file with a main file you write yourself, you use the `fwlite::Event` and `fwlite::Handle` class as something like:
-{%highlight c++%}
+To read this file with a main funtion, there are two key classes you will need to use. the [`fwlite::Event`](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26_patch1/doc/html/d0/d3f/classfwlite_1_1Event.html) class and the  [`fwlite::Handle`](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26_patch1/doc/html/d1/dd2/classfwlite_1_1Handle.html) class. The example version of how to use the classes could be given as:
+
+```cpp
 #include "DataFormats/FWLite/interface/Handle.h"
 #include "DataFormats/FWLite/interface/Event.h"
-#include "DataFormats/FWLite/interface/ChainEvent.h"
 #include <iostream>
+#include "TFile.h"
 int main()
 {
-   fwlite::event ev( TFile::Open("myedmfile.root") ); // For single files
-   // fwlite::ChainEvent ev ( {"file_1", "file_2", "file_3", ...} ); // For multiple files
-   fwlite::Handle<double> mydouble;
-   for( ev.toBegin() ; !ev.atEnd() ; ++ev ){
-      mydouble.getByLabel( ev , "myprod",   "Gaussian",   "Dummy"   );
-      std::cout << *mydouble << std::endl;
-   }
+  // For single files
+  fwlite::event ev( TFile::Open("myedmfile.root") );
+  fwlite::Handle<double> mydouble;
+  for( ev.toBegin() ; !ev.atEnd() ; ++ev ){
+    mydouble.getByLabel( ev , "myprod",   "Gaussian",   "Dummy"   );
+    std::cout << *mydouble << std::endl;
+  }
 }
-{%endhighlight%}
+```
+Make sure you add the required entries for the `BuildFile.xml` accordingly.
 
-You have to correct the `BuildFile` accordingly. The class `fwlite::Event` the class that helps with iterating through the file(s), and `fwlite::Handle` is the class that helps exposes the data in the corrected datatype. Essentially, on could treat a `Handle<T>` instance after the `getByLabel()` call to be a pointer to a `const T` instance.
+The class `fwlite::Event` the class that helps with iterating through the file(s), and `fwlite::Handle` is the class that helps exposes the data in the corrected datatype. To tell the `Handle` class which variable to extract, the `getByLabel()` member function must be called, with the latter three strings corresponding to the strings that are generated by the `edmDumpEventContent` commend. After calling the `getByLabel()` function, one could treat the instance of `Handle<T>` as a pointer to a `const T` instance.
 
-There! That is all you need to know to perform analysis using your own main function!
+After this, the analysis is a case of understanding what variables/classes are available in the `EDM` file you are working with, and how to extract the information of getting the information you are interested in. For the official `EDM` files, recipes for operating the data formats might be found on official documentation pages, such is the case for [MINIAOD](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD2016). Or you can look in the documentation of individual classes to see what variables are available on the CMSSW [doxygen page](http://cmsdoxygen.web.cern.ch/cmsdoxygen/).
 
 
 ## Comparison with ROOT TTree flavoured files
-If you are familiar with `ROOT` [`TTree`](https://root.cern.ch/doc/master/classTTree.html) class, you might think this is a reinvention of the wheel. A simple root flavored class could be read as something like:
-{% highlight c++ %}
+If you are familiar with `ROOT` [`TTree`](https://root.cern.ch/doc/master/classTTree.html) class, you might think this look familiar. A simple root flavored class could be read as something like:
+
+```cpp
 TFile *myfile =  new TFile("myfile.root");
-TTree *mytree = (TTree*) myfile->GetObject("mytree",mytree);
+TTree *mytree = (TTree*) myfile->GetObject("mytree");
 double mydouble;
 
 mytree->SetBranchAddress("myvar",&myvar);
@@ -83,12 +87,12 @@ for( int i = 0 ; i < i < mytree->GetEntries() ; ++i ){
    mytree->GetEntry(i);
    cout << mydouble << endl;
 }
-{% endhighlight %}
+```
 
-In some sense, you are correct. I believe that the EDM file format is indeed powered by the `TTree` technology, but there are several advantages that could be achieved by using this wrapper system.
+and you would be correct. The EDM file format is indeed powered by the `TTree` technology, but there are several advantages that could be achieved by using this wrapper system. You can always make the argument that if this is possible in ROOT, why not just use ROOT, and the answer will always be yes, but how much time are you willing to spending writing you own code for reading files when you could be writing code for actual analysis purposes.
 
 ### Intuitive Modification
-As we will see shortly, the EDM file is intuitive to manipulate. You could:
+As we will see in later tutorials, the EDM file is intuitive to manipulate. You could:
 
  * remove entries
  * add variable
@@ -97,14 +101,14 @@ As we will see shortly, the EDM file is intuitive to manipulate. You could:
 
 that was stored in a large file to produce a new, slimmed and much smaller size file with very intuitive code writing.
 
-In high every physics, un-selected data typically contain up to billions of events, most of which are not particularly interesting to the analysis, and even the events that are considered interesting might contain particles that are uninteresting. The ability to strip down these files to a manageable size is a key step in making analysis work of any kind possible at all. Yes there would be ways to do it using simple ROOT `TTree`, but why not use a system that has already been tested and designed by experts? It save you most of the pain of debugging, and focus more on the selection that you want to run.
+In high every physics, un-selected data typically contain up to billions of events, most of which are not particularly interesting to the analysis, and even the events that are considered interesting might contain particles that are uninteresting. The ability to strip down these files to a manageable size is a key step in making analysis work of any kind possible at all.
 
 ### Ease of Encapsulation
-As you can see when dumping the contents of an `EDM` file, you could see that entire classes and array of classes could actually be stored inside the file! To be honest, `TTree`s could save classes as well ( see [example](https://root.cern.ch/root/html/tutorials/tree/tree4.C.html]) ). But to do this in a unmodified root ( outside `CMSSW` ) is rather finicky. You have to generate class dictionary files, load the class C++ file every time you want to use the class. In the end it your root macros a mess. You could use a `makefile` to automate this process, but if you are willing to write a make file, why mot just use the `CMSSW` framework, where dictionary generation, `BuildFile` writting is so much simpler?
+As you can see when dumping the contents of an `EDM` file, you could see that entire classes and array of classes could actually be stored inside the file. The ROOT `TTree`s could save classes as well. But to do this is rather finicky.
 
-What's the use of encapsulation? If you have used the a `TTree` consisting only of C++ concrete types before, you might be familiar with this kind of code for getting the invariant mass of each jet pair in an event:
+Encapsulation has the advantage of making you code far more readable and thus much more manageable? If you have used the a `TTree` consisting only of C++ concrete types before, you might be familiar with this kind of code for getting the invariant mass of each jet pair in an event:
 
-{%highlight c++%}
+```cpp
 
 int size_of_jetlist;
 double jetpt[SIZE];
@@ -126,7 +130,7 @@ for( i = 0 ; i < tree->GetEntries() ; ++i ){
       }
    }
 }
-{%endhighlight%}
+```
 
 There are several problems with writing code like this:
 
@@ -134,9 +138,9 @@ There are several problems with writing code like this:
 * Counter-intuitive index handling: why is the `jetpt` variable capable of running a separate index with the `jeteta` variable?
 * Excessive amounts of variables that are only used once.
 
-All in all, it makes the code needlessly long, difficult to read and difficult to maintain and alter. With the power of encapsulation classes already existing the `CMSSW`, the power of the `EDM` file format and `C++11` standard I could write:
+All in all, it makes the code needlessly long, difficult to read and difficult to maintain and alter. With the power of encapsulation classes already existing the `CMSSW`, the power of the `EDM` file format and the `C++11` standard, once could write:
 
-{%highlight c++%}
+```cpp
 fwlite::Event ev("myfile.root");
 fwlite::Handle<std::vector<pat::Jet>> jethandle;
 
@@ -148,28 +152,25 @@ for( ev.toBegin() ; !ev.atEnd() ; ++ev() ){
       }
    }
 }
-{%endhighlight%}
+```
 
-Which ( at least in my opinion ) is a lot easier to read and understand than the long winded code of a flat `TTree` format.
+Which is a lot easier to read and understand than the long winded code of a flat `TTree` format.
 
 
 ## Arguments against the `EDM` file format
 
 In all analysis I have come across, the `EDM` file format is typically disfavored over the plain `TTree` file (commonly referred to as Ntuples). The reasons I will list here, and also include the reason why these arguments are becoming increasingly invalid.
 
-
   * **Forced ties to `CMSSW` environment**: This might be a problem when internet connections are still not as reliable as they are now. But now, logging onto a machine with the correct environments should not be a problem most of the time, and a uniform environment makes it easier to debug in most of the cases.
 
   * **The `EDM` file format is large**: It is true that the `EDM` file contains a much larger header space than a normal `TTree` file. But the main bulk of the `EDM` file actually comes in the physical object classes storing a lop of variables. Flattening these objects to arrays with variables dropped out could be used to reduce file size, but comes at the risk that wanted variable might be thrown out and there is an extra level of maintenance that needs to be worked on in addition to the analysis (ntuplizer codes are notoriously hard to maintain). I believe that one should focus on how to remove events and objects that are not useful to the analysis in question is a much more effective may of reduce storage space required for an analysis.
-
-  *  **Flat `TTree`s are "intuitive" to work with**: This is an argument that really rubs me the wrong way. The variables themselves are easier to see in a `TBroswer`, but that relation of the variables with each other are not. To me, the argument of "flat arrays" being easier to work with then encapsulated objects stems form the horrible habit of writing code before thinking about that you are writing. You only want something to work now rather than work for a long period of time.
 
   * **The `EDM` file format is difficult to learn** This is perhaps the only valid argument in my opinion. Learning how to read and modify `EDM` files of your own is not easy. Learning ROOT is already difficult enough same reason of spare documentation (and extremely counter C++ intuition designs), learning `CMSSW` and `EDM` file manipulation is even harder. But all in all, I think it would be worth the time.
 
 
 ## Closing words
 
-I have said that manipulating the contents of an `EDM` file is intuitive. This is where the backbone of `CMSSW` really shines, but is not easy to learn, as it:
+I have said that manipulating the contents of an `EDM` file is intuitive. This is where the brilliance of `CMSSW` really shines, but is not easy to learn, as it:
 
  * Requires extensive knowledge of C++ syntax: (templates, virtual functions)
  * Lacks a direct file for a main function and you could only interact with a main function through a *python* file.
