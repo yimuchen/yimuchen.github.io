@@ -5,31 +5,53 @@ comments: false
 modified: 2016-06-08
 ---
 
-<h1>Basic Information</h1>
+<h2>Basic Information</h2>
 
 
-<h1>Experience</h1>
+<h2>Education</h2>
 
-{% for exp in  site.data.about.experiences %}
+{% for edu in site.data.about.education %}
    <div class="exp_container">
       <div class="exp_img">
-         <img src="{{exp.img}}" alt="{{exp.name}}"/>
+         <img src="{{edu.img}}" alt="{{edu.school}}"/>
       </div>
+
       <div class="exp_text">
-         <span class="exp_title">
-            <a href="{{exp.url}}" class="exp_name">{{exp.name}}</a><br />
-            <a class="exp_year">{{exp.years}}</a> <br />
+         <span class="exp_header">
+            <span class="exp_title">{{edu.degree}}</span>
+            <a href="{{edu.url}}" class="exp_institute">{{edu.school}}</a>
+            <span class="exp_year">{{edu.years}}</span>
          </span>
          <p class="exp_desc">
-            {{exp.description}}
+            {{edu.description}}
          </p>
       </div>
    </div>
 {% endfor %}
 
-
-
-<h1>Tools/Skills</h1>
+<h2>Research Experience</h2>
+{% for exp in site.data.about.research %}
+  <div class="exp_container">
+      <div class="exp_img">
+          <img src="{{exp.img}}" alt="exp.institute"/>
+      </div>
+      <div class="exp_text">
+        <span class="exp_header">
+            <span class="exp_title">{{exp.name}}</span>
+            <a href="{{exp.url}}" class="exp_institute">{{exp.institute}}</a>
+            <span class="exp_year">{{exp.years}}</span>
+        </span>
+        <p class="exp_desc">
+          <ul>
+          {% for item in exp.details %}
+            <li>{{item}}</li>
+          {% endfor %}
+          </ul>
+        </p>
+      </div>
+  </div>
+{% endfor %}
+<h2>Tools/Skills</h2>
 
 <div class="tool_master">
 {% for tool in site.data.about.tools %}

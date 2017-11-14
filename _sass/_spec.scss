@@ -1,74 +1,98 @@
 // Styling information for specs pages
 
+.exp_container {
+  padding-bottom: 30px;
+  display: inline-flex;
+  // Image logo on the left,
+  .exp_img {
+    //Place image on left with fixed width
+    width: 20%;
+    float: left;
+    height: 100%;
+    margin: auto 10px;
+    // background: lighten($base-color,1);
+    img {
+      padding: 10px;
+      width: 100%;
+    }
+  }
+  // Text and description on the right.
+  .exp_text {
+    width: 75%;
+    float: right;
+    overflow: auto;
+    display: inline-block;
 
-$exp_logo_size: 120px;
-.exp_container{
-   padding-bottom: 30px;
-   overflow: auto;
-   .exp_img { //Place Log image on left with fixed width
-      width: 20%;
-      float:left;
-      height: 100%;
-      img {
-         padding: 10px;
-         width: $exp_logo_size;
+    .exp_header {
+      width: 100%;
+      background-color: lighten($base-color,3);
+      overflow: auto;
+      display: inline-block;
+      $titlepadding: 10px;
+
+      .exp_title {
+        font-size: 1.5em;
+        font-weight: bold;
+        width: 95%;
+        display: inline-block;
+        padding-left: $titlepadding;
+        padding-top: $titlepadding;
       }
-   }
 
-   .exp_text {
-      width: 75%;
-      float: right;
-      .exp_title{
-         background-color: darken($base-color,3);
-         padding-bottom: -10px;
-         .exp_name{
-            font-size: 1.1em;
-            font-weight: bold;
-            float: left;
-         }
-
-         .exp_year {
-            float: right;
-            color: darken($text-color,15);
-         }
+      .exp_institute {
+        font-size: 1.1em;
+        font-weight: bold;
+        float: left;
+        display: inline-block;
+        padding-left: $titlepadding;
+        padding-bottom: $titlepadding;
       }
 
-      p{
-         text-align: justify;
-         margin-top: 0px;
-         padding-top: 0px;
+      .exp_year {
+        float: right;
+        color: darken($text-color,15);
+        display: inline-block;
+        padding-right: $titlepadding;
+        padding-bottom: $titlepadding;
       }
-   }
+    }
+
+    p {
+      text-align: justify;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
 }
 
+.tool_master {
+  width: 100;
+  display: inline-block;
 
-.tool_master{
-   width:100;
-   display: inline-block;
-   .tool_container{
-      width:45%;
-      display: inline-block;
-      background-color: darken($base-color,1);
-      padding: 5px;
-      margin: 10px;
+  .tool_container {
+    width: 45%;
+    display: inline-block;
+    background-color: darken($base-color,1);
+    padding: 5px;
+    margin: 10px;
 
-      .tool_name{
-         float:left;
-         font-weight: bold;
-         font-size: 1.1em;
-      }
+    .tool_name {
+      float: left;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
 
-      .tool_year{
-         padding-left: 10px;
-         font-size: 0.8em;
-         vertical-align: bottom;
-         color: darken($text-color,15);
-      }
+    .tool_year {
+      padding-left: 10px;
+      font-size: 0.8em;
+      vertical-align: bottom;
+      color: darken($text-color,15);
+    }
 
-      .tool_level{
-         font-size: 0.8em;
-         vertical-align: bottom;
-         float:right;
-      }
-   }
+    .tool_level {
+      font-size: 0.8em;
+      vertical-align: bottom;
+      float: right;
+    }
+  }
 }

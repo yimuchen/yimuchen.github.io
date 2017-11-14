@@ -4,18 +4,62 @@ Basic Info:
    Position: Taipei, Taiwan, the Earth, The Solar System, The Milky Way, the Virgo Cluster, the Virgo Super cluster, The universe
 
 
-experiences:
-   -  name: National Taiwan University, Department of Physics
+education:
+   -  degree: Master of Science in Physics
+      school: National Taiwan University
       img: http://www.ntu.edu.tw/images/inner/emblem_1.png
       url : http://www.ntu.edu.tw/
-      years: June, 2011 - June, 2017
-      description: Majored in physics, attended advanced courses including quantum field theory and statistical mechanics. Took specialized course in Data Structure and Programming in the Department of Electrical Enginnering.
+      years: June, 2015 - June, 2017
+      description: Entered the NTU CMS group, and was stationed at CERN as a research assistant for a year. A public version of my masters thesis, "Search for excited top quark pair production in lepton plus jets final state with √s = 13 TeV at CMS", could be found <a href="#">here</a>.
 
-   -  name: National Lou-Tung Senior High School
+   -  degree: Bachelor of Science in Physics
+      school: National Taiwan University
+      img: http://www.ntu.edu.tw/images/inner/emblem_1.png
+      url : http://www.ntu.edu.tw/
+      years: June, 2011 - June, 2015
+      description: Engaged with graduate level theoretical courses, including Quantum Field Theory, Theory of Relativity, Statistical Mechanics; also participated in high-intermediate programming courses, most notably Data Structure and Programming.
+
+
+   -  degree: Experimental Science Specialisation Class
+      school: National Lou-Tung Senior High School
       img: http://120.101.70.8/a/badge/ltshbadge.jpg
       url : http://www.ltsh.ilc.edu.tw/bin/home.php
       years: Sep, 2008 - June, 2011
-      description: Attended science and engineering experiment program.
+      description: Self organised reading class for undergraduate mathematics and physics material, including calculus (up to basic differential equations), and freshman general physics.
+
+research:
+  - name: Stationed Research assistant at CERN
+    institute: NTUCMS group
+    img: http://www.ntu.edu.tw/images/inner/emblem_1.png
+    years: June, 2016 - June, 2017
+    details:
+      - Contact person for CMS analysis B2G-16-025.
+      - Developer for CMS pixel phase 1 upgrade DQM software (main software suite and GUI server.).
+
+  - name: Research assistant
+    institute: NTUCMS group
+    img: http://www.ntu.edu.tw/images/inner/emblem_1.png
+    years: Jan, 2015 - June, 2017
+    details:
+      - Contact developer for bprime analysis kit
+      - Teaching assistant for General Physics (CS department)
+
+miscexp:
+  - name: National Taiwan University Chorus (NTU school choir)
+    img: http://www.ntu.edu.tw/images/inner/emblem_1.png
+    years: Sep, 2011 - July, 2017
+    details:
+      - Choir secriatat (Sep, 2013 - Aug, 2014)
+      - 5 year choirisist (9 self-organised performances, 5 major invited performances, 4 country-wide competitions)
+      - Frontstage ticket manager (Summer, 2017 performance)
+
+  - name: NTU Physics Department Table Tennis Team
+    img: http://www.ntu.edu.tw/images/inner/emblem_1.png
+    years: Sep, 2011 - June, 2016
+    details:
+      - Vice team captain (July, 2013 - June, 2014)
+      - 5 year active player (12 major team competitions)
+
 
 tools_max_level: 7
 
