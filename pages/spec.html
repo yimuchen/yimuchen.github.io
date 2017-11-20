@@ -4,7 +4,8 @@ title: ENSC Specs Sheet
 comments: false
 modified: 2016-06-08
 ---
-{% include spec_button.html %} <!-- This is for the Javascripts for interactivity-->
+{% include spec_button.html %}
+<!-- This is for the Javascripts for interactivity-->
 
 <!--========================================================-->
 <!--Content nav bar and navigation icon-->
@@ -16,13 +17,15 @@ modified: 2016-06-08
 
 <div id="spec-nav">
   <div>
-  <b>Contents</b><br>
-  <a href="#basic">Basic information</a> <br>
-  <a href="#education">Education</a><br>
-  <a href="#research">Research experience</a><br>
-  <a href="#miscellaneous">Miscellaneous experience</a><br>
-  <a href="#tools">Tools and skillsets</a><br>
+    <span class="spec-nav-title">Contents</span>
+    <span class="spec-nav-item"><a href="#basic">Basic information</a></span>
+    <span class="spec-nav-item"><a href="#education">Education</a></span>
+    <span class="spec-nav-item"><a href="#research">Research experience</a></span>
+    <span class="spec-nav-item"><a href="#miscellaneous">Miscellaneous experience</a></span>
+    <span class="spec-nav-item"><a href="#tools">Tools and skillsets</a></span>
+
   </div>
+
 </div>
 
 
@@ -62,7 +65,7 @@ modified: 2016-06-08
 
   <div class="exp_text">
     <div class="exp_header">
-      <span class="exp_title">{{edu.degree}}</span>
+      <span class="exp_title">{{edu.degree}}</span><span class="exp_expand"></span>
       <a href="{{edu.url}}" class="exp_institute">{{edu.school}}</a>
       <span class="exp_year">{{edu.years}}</span>
     </div>
@@ -83,7 +86,7 @@ modified: 2016-06-08
   </div>
   <div class="exp_text">
     <span class="exp_header">
-            <span class="exp_title">{{exp.name}}</span>
+      <span class="exp_title">{{exp.name}}</span><span class="exp_expand"></span>
     <a href="{{exp.url}}" class="exp_institute">{{exp.institute}}</a>
     <span class="exp_year">{{exp.years}}</span>
     </span>
@@ -109,7 +112,7 @@ modified: 2016-06-08
   </div>
   <div class="exp_text">
     <span class="exp_header">
-            <span class="exp_title"><a href="{{exp.url}}">{{exp.name}}</a></span>
+            <span class="exp_title"><a href="{{exp.url}}">{{exp.name}}</a></span><span class="exp_expand"></span>
     <span class="exp_year">{{exp.years}}</span>
     </span>
     <div class="exp_desc">
@@ -131,30 +134,27 @@ modified: 2016-06-08
 <!--========================================================-->
 <div class="tool_master">
   <div class="tool_button_container">
-  {% for tool in site.data.about.tools %}
-  <input type="checkbox" id="tool_{{tool.name}}"/>
-  <label class="tool_button" for="tool_{{tool.name}}">
+    {% for tool in site.data.about.tools %}
+    <input type="checkbox" id="tool_{{tool.name}}" />
+    <label class="tool_button" for="tool_{{tool.name}}">
     <div class="tool_img_container">
       <img src="{{tool.icon}}" alt="{{tool.name}}" />
     </div>
     <div class="tool_stars">
       {% for i in (1..{{tool.stars}}) %} &#9733; {% endfor %}
     </div>
-  </label>
-  {% endfor %}
+  </label> {% endfor %}
 
   </div>
-  <br>
-
-  {% for tool in site.data.about.tools %}
+  <br> {% for tool in site.data.about.tools %}
   <div class="tool_detail" id="tool_{{tool.name}}_detail">
     <div class="tool_detail_title">
-        <div class="tool_detail_name">
-          {{tool.name}}
-        </div>
-        <div class="tool_detail_level">
-          {{tool.level}}
-        </div>
+      <div class="tool_detail_name">
+        {{tool.name}}
+      </div>
+      <div class="tool_detail_level">
+        {{tool.level}}
+      </div>
     </div>
     <p>{{tool.general}}</p>
     <ul>

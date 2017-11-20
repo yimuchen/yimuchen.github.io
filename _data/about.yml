@@ -3,7 +3,7 @@ basic:
    month: August
    year: 1993
    location: Yilan, Taiwan
-   about: I'm use to be a physics student studying experimental particle physics, and am currently apply for a PhD in physics in the same field of study (serving in the obligatory military service as of writing). Fields of interest, part from the obvious particle physics, includes complex systems and computing. Look below for more details!
+   about: I was a physics student studying experimental particle physics, and I am currently apply for a PhD in physics in the same field of study (serving in an obligatory military service as of writing). Fields of interest, part from the obvious particle physics, includes complex systems and computing. Look below for more details!
 
 
 education:
@@ -12,7 +12,12 @@ education:
       img: http://www.ntu.edu.tw/images/inner/emblem_1.png
       url : http://www.ntu.edu.tw/
       years: June, 2015 - June, 2017
-      description: Offically specialised in high energy physics analysis, taking courses such as <i>QCD at colliders</i> and <a href="http://hep1.phys.ntu.edu.tw/~kfjack/lecture/hepcomp/2015/"><i>Computational Methods for Elementary Particle Physics</i></a>. Entered the <a href="https://cms.cern/">CMS</a> group at <a href="https://sites.google.com/view/ntucmswiki/">NTU</a> under the supervision of Prof. Kai-Feng Chen, and was stationed at <a href="https://home.cern/">CERN</a>, Switzerland as a research assistant for a year (2016-2017). My masters thesis, "Search for excited top quark pair production in lepton plus jets final state with √s = 13 TeV at CMS", could be found <a href="http://etds.lib.ntu.edu.tw/etdservice/view_metadata?etdun=U0001-3105201722255200">here</a>. More details could be found in the <a href="#research">research experience section.</a>
+      description: 'Offically specialised in high energy physics analysis,
+      taking courses such as <i>QCD at colliders</i>
+      and <a href="http://hep1.phys.ntu.edu.tw/~kfjack/lecture/hepcomp/2015/"><i>Computational Methods for Elementary Particle Physics</i></a>.
+      Entered the <a href="https://cms.cern/">CMS</a> group at <a href="https://sites.google.com/view/ntucmswiki/">NTU</a> under the supervision of professor Kai-Feng Chen, and was stationed at <a href="https://home.cern/">CERN</a>, Switzerland as a research assistant for a year (2016-2017).
+      My masters thesis, "Search for excited top quark pair production in lepton plus jets final state with √s = 13 TeV at CMS", could be found <a href="http://etds.lib.ntu.edu.tw/etdservice/view_metadata?etdun=U0001-3105201722255200">here</a>.
+      More details could be found in the <a href="#research">research experience section</a>.'
 
    -  degree: Bachelor of Science in Physics
       school: National Taiwan University
@@ -77,7 +82,7 @@ tools:
      general: Adept with framework design, using both the old pointer style syntax, or the newer template/reference style synctax. Rudementary knowledge of fundemental computing data types and memory interaction/handling concepts.
      specifics:
        - 'The new standards:
-          <a href="https://en.wikipedia.org/wiki/C%2B%2B11\">C++11</a>,
+          <a href="https://en.wikipedia.org/wiki/C%2B%2B11">C++11</a>,
           <a href="https://en.wikipedia.org/wiki/C%2B%2B14">C++14</a>.
           Knows enough for template/reference style style designs, yet to unleash the full power of
           <a href="https://en.wikipedia.org/wiki/Anonymous_function">Lambda expresions</a>.'
@@ -85,10 +90,10 @@ tools:
           Mainly to assist with better user interaction experience (boost::program_options),
           and file/string parsing (boost::property_tree, boost::format... etc.).'
        - 'High energy physics libraries:
-         <a href=\"https://root.cern.ch/\">ROOT</a>,
-         <a href=\"https://root.cern.ch/roofit\">ROOT</a>,
-         <a href=\"http://cms-sw.github.io/\">CMSSW</a>.
-         This using the classical methods of analysis, and not the more fancy machine-learning like methods.'
+         <a href="https://root.cern.ch/">ROOT</a>,
+         <a href="https://root.cern.ch/roofit">ROOFIT</a>,
+         <a href="http://cms-sw.github.io/">CMSSW</a>.
+         More experienced with the classes and methods associated with "classical" methods of analysis, and not the more fancy, machine-learning like methods.'
        - 'C style mathematics libraries: <a href="https://www.gnu.org/software/gsl/">GSL</a>.'
        - 'Familiar with the makefile/cmake design structure, but a bit out of practice.'
 
@@ -96,18 +101,18 @@ tools:
      icon: http://icons.iconarchive.com/icons/cornmanthe3rd/plex/128/Other-python-icon.png
      stars: 4
      level: high-intermediate
-     general: Familiar working with python flavoured object orientated programming syntax (comprehensive array... etc.). Knows enough to pick up a new library when ever needed. Mainly using python for high level user interfacing (command line interactions... etc).
+     general: Familiar working with python flavoured object orientated programming syntax (comprehensive array... etc.). Knows enough to pick up a new library when ever needed, and in principle is able to create and design custom python packages, though not experienced enough in the python way for a non-me human to find the packages useful. Mainly using python for high level user interfacing (command line interactions, mini-shells... etc).
      specifics:
        - 'User interfacing libraries: argparse, Commandline... etc.'
        - 'Mathematics library: Numpy, Scipy, PyRoot.'
-       - 'System interfacting librarys: sys, subprocess... etc.'
+       - 'System interfacing librarys: sys, subprocess... etc.'
        - 'C++/python interfacing using boost::python.'
 
    - name: Latex/Tex
      icon: http://4vector.com/thumb_data/afd-56603.jpg
      stars: 3
      level: intermediate
-     general: Package custumisation and basic layout and symbol desgins. Knows enough about typography and typesetting to annoy those who doesn't. Experienced with mathematical element creation with packages such as tikz.
+     general: Package custumisation and basic layout and symbol desgins. Knows enough about typography and typesetting to annoy those who don't, though independent layout design is mostly trail and error progresses rather than constructive interations. Also experience with mathematical element creation with packages such as tikz.
      specifics:
         - <a href="https://github.com/yimuchen/UnixConfig/tree/master/TexSettings">Custom .sty files</a> I made because I feel lazy.
         - Example of my typesetting could be found in <a href="http://etds.lib.ntu.edu.tw/etdservice/view_metadata?etdun=U0001-3105201722255200">my thesis</a>.
@@ -119,7 +124,7 @@ tools:
      general: Mainly user configuration (the many dotfiles), but experience enough with system administration to know where to look for information(I use <a href="https://www.archlinux.org/">Archlinux</a>, so this is pretty much a requirement). Shell scripting (for me) has been replaced by python for better clarity, but still used for quick-and-dirty file parsing.
      specifics:
        - <a href="https://github.com/yimuchen/UnixConfig">My many dot files</a>.
-       - Familiar with the commond grep, sed, with regex and command line piping for quick file filtering and editing.
+       - Familiar with the commond grep, sed, with regex, globbing (wildcards), and command line piping for quick file filtering and editing.
 
    - name: Git/Github workflow
      icon: https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png
@@ -130,7 +135,7 @@ tools:
        - <a href="https://github.com/yimuchen">My many github repos</a>. Most of them are for single user purposes.
        - <a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Ayimuchen+archived%3Afalse+">My collaboration experience on github</a>, mostly small incremental changes to packages.
 
-   - name: HTML/CSS/Javascripts
+   - name: Web Frontend
      icon: https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png
      stars: 2
      level: intermediate
