@@ -4,83 +4,164 @@ title: ENSC Specs Sheet
 comments: false
 modified: 2016-06-08
 ---
+{% include spec_button.html %} <!-- This is for the Javascripts for interactivity-->
 
-<h2>Basic Information</h2>
+<!--========================================================-->
+<!--Content nav bar and navigation icon-->
+<!--========================================================-->
+<div id="spec-nav-button" data-text-original="◀" data-text-swap="▶">
+  ◀
+</div>
 
 
-<h2>Education</h2>
-
-{% for edu in site.data.about.education %}
-   <div class="exp_container">
-      <div class="exp_img">
-         <img src="{{edu.img}}" alt="{{edu.school}}"/>
-      </div>
-
-      <div class="exp_text">
-         <span class="exp_header">
-            <span class="exp_title">{{edu.degree}}</span>
-            <a href="{{edu.url}}" class="exp_institute">{{edu.school}}</a>
-            <span class="exp_year">{{edu.years}}</span>
-         </span>
-         <p class="exp_desc">
-            {{edu.description}}
-         </p>
-      </div>
-   </div>
-{% endfor %}
-
-<h2>Research Experience</h2>
-{% for exp in site.data.about.research %}
-  <div class="exp_container">
-      <div class="exp_img">
-          <img src="{{exp.img}}" alt="exp.institute"/>
-      </div>
-      <div class="exp_text">
-        <span class="exp_header">
-            <span class="exp_title">{{exp.name}}</span>
-            <a href="{{exp.url}}" class="exp_institute">{{exp.institute}}</a>
-            <span class="exp_year">{{exp.years}}</span>
-        </span>
-        <p class="exp_desc">
-          <ul>
-          {% for item in exp.details %}
-            <li>{{item}}</li>
-          {% endfor %}
-          </ul>
-        </p>
-      </div>
+<div id="spec-nav">
+  <div>
+  <b>Contents</b><br>
+  <a href="#basic">Basic information</a> <br>
+  <a href="#education">Education</a><br>
+  <a href="#research">Research experience</a><br>
+  <a href="#miscellaneous">Miscellaneous experience</a><br>
+  <a href="#tools">Tools and skillsets</a><br>
   </div>
-{% endfor %}
-<h2>Tools/Skills</h2>
+</div>
 
+
+<!--========================================================-->
+<h2 id="basic">Basic Information</h2>
+<!--========================================================-->
+
+<div class="basic_container">
+
+  <div class="basic_entry">
+    <div class="basic_item">Name</div>
+    <div class="basic_content">{{site.data.about.basic.name}}</div>
+  </div>
+  <div class="basic_entry">
+    <div class="basic_item">Birthday</div>
+    <div class="basic_content">{{site.data.about.basic.month}}, {{site.data.about.basic.year}}</div>
+  </div>
+  <div class="basic_entry">
+    <div class="basic_item">Location</div>
+    <div class="basic_content">{{site.data.about.basic.location}}</div>
+  </div>
+  <div class="basic_entry">
+    <div class="basic_item">About</div>
+    <div class="basic_content">{{site.data.about.basic.about}}</div>
+  </div>
+</div>
+
+
+<!--========================================================-->
+<h2 id="education">Education</h2>
+<!--========================================================-->
+{% for edu in site.data.about.education %}
+<div class="exp_container">
+  <div class="exp_img">
+    <img src="{{edu.img}}" alt="{{edu.school}}" />
+  </div>
+
+  <div class="exp_text">
+    <div class="exp_header">
+      <span class="exp_title">{{edu.degree}}</span>
+      <a href="{{edu.url}}" class="exp_institute">{{edu.school}}</a>
+      <span class="exp_year">{{edu.years}}</span>
+    </div>
+    <div class="exp_desc">
+      <p>{{edu.description}}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<!--========================================================-->
+<h2 id="research">Research Experience</h2>
+<!--========================================================-->
+{% for exp in site.data.about.research %}
+<div class="exp_container">
+  <div class="exp_img">
+    <img src="{{exp.img}}" alt="{{exp.institute}}" />
+  </div>
+  <div class="exp_text">
+    <span class="exp_header">
+            <span class="exp_title">{{exp.name}}</span>
+    <a href="{{exp.url}}" class="exp_institute">{{exp.institute}}</a>
+    <span class="exp_year">{{exp.years}}</span>
+    </span>
+    <div class="exp_desc">
+      <ul>
+        {% for item in exp.details %}
+        <li>{{item}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+<!--========================================================-->
+<h2 id="miscellaneous">Miscellaneous Experience</h2>
+<!--========================================================-->
+{% for exp in site.data.about.miscexp %}
+<div class="exp_container">
+  <div class="exp_img">
+    <img src="{{exp.img}}" alt="{{exp.institute}}" />
+  </div>
+  <div class="exp_text">
+    <span class="exp_header">
+            <span class="exp_title"><a href="{{exp.url}}">{{exp.name}}</a></span>
+    <span class="exp_year">{{exp.years}}</span>
+    </span>
+    <div class="exp_desc">
+      <ul>
+        {% for item in exp.details %}
+        <li>{{item}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+
+
+<!--========================================================-->
+<h2 id="tools">Tools and Skillsets</h2>
+<!--========================================================-->
 <div class="tool_master">
-{% for tool in site.data.about.tools %}
-   <div class="tool_container">
-      <span class="tool_title">
-         <a class="tool_name">{{tool.name}}</a>
-         <a class="tool_year">(
-         {% assign year_count = 'now' | date: "%Y" | minus: tool.since %}
-         {%if year_count < 1 %}
-            &lt; 1
-         {% elsif year_count > 5 %}
-            + 5
-         {% else %}
-            {{ year_count }}
-         {% endif %} yrs.)
-         </a>
-         <a class="tool_level">
-         {% assign inv_count = site.data.about.tools_max_level | minus: tool.level %}
-         {% assign count = tool.level %}
-         {% for i in (1..inv_count) %} &#9734; {% endfor %}
-         {% for i in (1..count) %} &#9733; {% endfor %}
-         </a>
-      </span></br>
-      <div class="tool_description">
-         <p>
-         {{tool.description}}
-         </p>
-      </div>
-   </div>
-{% endfor %}
+  <div class="tool_button_container">
+  {% for tool in site.data.about.tools %}
+  <input type="checkbox" id="tool_{{tool.name}}"/>
+  <label class="tool_button" for="tool_{{tool.name}}">
+    <div class="tool_img_container">
+      <img src="{{tool.icon}}" alt="{{tool.name}}" />
+    </div>
+    <div class="tool_stars">
+      {% for i in (1..{{tool.stars}}) %} &#9733; {% endfor %}
+    </div>
+  </label>
+  {% endfor %}
 
+  </div>
+  <br>
+
+  {% for tool in site.data.about.tools %}
+  <div class="tool_detail" id="tool_{{tool.name}}_detail">
+    <div class="tool_detail_title">
+        <div class="tool_detail_name">
+          {{tool.name}}
+        </div>
+        <div class="tool_detail_level">
+          {{tool.level}}
+        </div>
+    </div>
+    <p>{{tool.general}}</p>
+    <ul>
+      {% for thing in tool.specifics %}
+      <li> {{thing}} </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
 </div>
