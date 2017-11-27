@@ -100,14 +100,14 @@
     .exp_header {
       .exp_expand:before {
         font-family: monospace;
-        content: '+';
+        content: '﹀';
       }
     }
 
     .exp_header.shown {
       .exp_expand:before {
         font-family: monospace;
-        content: '-';
+        content: '︿';
       }
     }
 
@@ -132,7 +132,7 @@
     }
   }
 }
-
+// Tool buttons objects
 .tool_master {
   width: 100%;
   display: inline-block;
@@ -153,7 +153,7 @@
       display: inline-block;
       position: relative;
       cursor: pointer;
-      border: 1px solid $body-color;
+      border: 1px solid $text-color;
       margin: 5px;
 
       .tool_img_container {
@@ -231,17 +231,18 @@
     transition: max-height 1.5s ease-in-out;
   }
 }
-
+// Right navigation menu part.
 #spec-nav-button {
   position: fixed;
   top: 50%;
   right: 0;
   z-index: 3000;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 6px;
-  background: darken($base-color, 5);
-  font-size: 1.2em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 3px;
+  color: $base-color;
+  background: $text-color;
+  font-size: 0.8em;
   cursor: pointer;
 }
 
@@ -259,26 +260,30 @@
   width: 300px;
   right: -300px;
   overflow-y: hidden;
-  transition: right 1.5s ease-in-out;
+  transition: right 0.6s ease-in-out;
 
   div {
     margin: auto;
     display: inline-block;
     text-align: right;
-    line-height: 2.4em;
     font-size: 1.2em;
 
     .spec-nav-title {
       font-weight: bold;
+      width: 100%;
+      padding-top: 0.4em;
+      padding-bottom: 0.4em;
       padding-right: 60px;
     }
 
     .spec-nav-item {
       display: inline-block;
-      width:100%;
-      line-height: 2em;
+      width: 100%;
+      padding-top: 0.4em;
+      padding-bottom: 0.4em;
       padding-right: 60px;
     }
+
     .spec-nav-item:hover {
       background-color: darken($base-color, 5);
     }
@@ -291,10 +296,74 @@
 
 #spec-nav.shown {
   right: 0;
-  transition: right 0.8s ease-in-out;
+  transition: right 0.6s ease-in-out;
 }
 
 html {
   // For smooth scrolling to anchor points.
   scroll-behavior: smooth;
+}
+//----------------------------------------------------
+// Facts part CSS
+//----------------------------------------------------
+
+#facts_show {
+  position: relative;
+
+  #facts_explain {
+    width: 600px;
+    height: auto;
+    background-color: $base-color;
+    color: $text-color;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1em;
+    line-height:1.2em;
+    font-weight: lighter;
+    display: block;
+
+    /* Position the tooltip text - see examples below! */
+    position: relative;
+    top: 100%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+#facts_show:hover #facts_explain {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.fact_container {
+  position: relative;
+  height: 300px;
+
+  .fact_item {
+    height: 100%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    p {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2em;
+    }
+    display: block;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fact_item.shown {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
 }

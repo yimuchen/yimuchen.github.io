@@ -12,13 +12,10 @@ comments: false
 
    Details :
       - Definition of hierarchies in: /_data/tag_hierarchy.yml
-      - jQuery scripts in :           /_include/tag_button.html
-      - css in:                       /_scss/tag-page.scss
+      - jQuery scripts in :           /assets/js/animation/tagpage.js
+      - css in:                       /_sass/tag-page.scss
 
 ------------------------------------------------------------------------------->
-{% include tag_button.html %}
-
-
 <ul class="tag_list">
 {% for main_tag in site.data.tag_hierarchy %}
 <li class="main_tag">
@@ -93,3 +90,7 @@ comments: false
    </ul>
 </li>
 </ul>
+
+
+<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="{{ site.url }}/assets/js/animation/tagpage.js"></script>

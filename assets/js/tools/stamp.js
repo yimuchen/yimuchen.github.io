@@ -122,27 +122,3 @@ function AppendResults(target, answer) {
   }
   document.getElementById("stamp-ans").innerHTML += ansstr + "<br>";
 }
-
-
-// function GenerateDefinedList() {
-//   var debugstr = "";
-//   for ( var i = 0 ; i < fixed_denominations.length ; i++ ) {
-//     var typestr = "";
-//     var stamptype = fixed_denominations[i]
-//     typestr += "<li>"
-//     typestr += "<input type=\"checkbox\" id=\"stamp-value" + stamptype.value + "\"" ;
-//     if( stamptype.default ){
-//       typestr += " checked ";
-//     }
-//     typestr += " />"
-//     typestr += "<label for=\"stamp-value" + stamptype.value + "\">"
-//     typestr += "<span>" + stamptype.value + " 元</span>"
-//     typestr += "<img src=\"" + stamptype.image + " \" />"
-//     typestr += "</label>"
-//     typestr += "</li>"
-
-//     //alert( typestr );
-//     document.getElementById("predefined-stamps").innerHTML += typestr;
-//   }
-// }
-// GenerateDefinedList(

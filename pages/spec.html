@@ -2,10 +2,11 @@
 layout: page
 title: ENSC Specs Sheet
 comments: false
-modified: 2016-06-08
+modified: 2017-11-24
 ---
-{% include spec_button.html %}
-<!-- This is for the Javascripts for interactivity-->
+<!-- Interactive javascripts -->
+<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="{{ site.url }}/assets/js/animation/specpage.js"></script>
 
 <!--========================================================-->
 <!--Content nav bar and navigation icon-->
@@ -13,7 +14,6 @@ modified: 2016-06-08
 <div id="spec-nav-button" data-text-original="◀" data-text-swap="▶">
   ◀
 </div>
-
 
 <div id="spec-nav">
   <div>
@@ -23,7 +23,7 @@ modified: 2016-06-08
     <span class="spec-nav-item"><a href="#research">Research experience</a></span>
     <span class="spec-nav-item"><a href="#miscellaneous">Miscellaneous experience</a></span>
     <span class="spec-nav-item"><a href="#tools">Tools and skillsets</a></span>
-
+    <span class="spec-nav-item"><a href="#facts">Random Facts</a></span>
   </div>
 
 </div>
@@ -162,6 +162,24 @@ modified: 2016-06-08
       <li> {{thing}} </li>
       {% endfor %}
     </ul>
+  </div>
+  {% endfor %}
+</div>
+
+<!--========================================================-->
+<h2 id="facts">Random Facts
+  <sup id=facts_show>
+    ?
+    <span id="facts_explain">
+      {{site.data.about.factexp}}
+    </span>
+</sup>
+</h2>
+<!--========================================================-->
+<div class="fact_container">
+  {% for fact in site.data.about.facts %}
+  <div class="fact_item" id="fact_item_{{forloop.index}}">
+    <p>{{fact}}</p>
   </div>
   {% endfor %}
 </div>
