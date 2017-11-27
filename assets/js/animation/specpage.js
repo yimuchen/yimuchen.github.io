@@ -7,39 +7,22 @@
  * CSS found in the _sass/_specs.scss actually defines the dynamic
  * behaviour.
  *
-*************************************************************/
-
-// Class toggling for experience sections.
-$(document).ready(function() {
-  $(".exp_header").on("click", function() {
-    if ($(this).siblings(".exp_desc").hasClass("shown")) {
-      $(this).siblings(".exp_desc").removeClass("shown");
-    } else {
-      $(this).siblings(".exp_desc").addClass("shown");
-    }
-
-    if ($(this).hasClass("shown")) {
-      $(this).removeClass("shown");
-    } else {
-      $(this).addClass("shown");
-    }
-  });
-});
-
+ *************************************************************/
 // Class toggling for checkboxes in tools section
 $(document).ready(function() {
   $('input[type="checkbox"]').on('change', function() {
     $('input[type="checkbox"]').not(this).prop('checked', false);
     var item_state = $(this).prop('checked');
     var item_change = $(this).attr('id') + '_detail';
-    $('div[id$=_detail]').each(function() {
+
+    $('.tool_detail').each(function() {
       if ($(this).attr('id') != item_change) {
-        $(this).removeClass("shown");
+        $(this).slideUp(300, 'swing');
       } else {
         if (item_state) {
-          $(this).addClass("shown");
+          $(this).slideDown(300, 'swing');
         } else {
-          $(this).removeClass("shown");
+          $(this).slideUp(300, 'swing');
         }
       }
     });
@@ -76,10 +59,10 @@ function ShowRandom() {
 }
 
 // Showing random on startup.
-$(document).ready( ShowRandom );
+$(document).ready(ShowRandom);
 
 // Showing random every n milliseconds
-window.setInterval( ShowRandom, 30*1000 );
+window.setInterval(ShowRandom, 30 * 1000);
 
 
 // Toggling > < section of right navigation bar.
@@ -94,12 +77,11 @@ $(document).ready(function() {
       $('[id=spec-nav]').removeClass("shown");
   });
 });
-asdf
 
 // Class toggle for the right navigation column.
 $(document).ready(function() {
-  $(".spec-nav-item").on('click', function() {
+  $('.spec-nav-item').on('click', function() {
     $('[id=spec-nav]').removeClass('shown');
-    $('[id=spec-nav-button]').text($('id=spec-nav-button').data('text-original'));
+    $('[id=spec-nav-button]').text($('[id=spec-nav-button]').data('text-original'));
   });
 });

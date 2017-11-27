@@ -1,0 +1,14 @@
+/************************************************
+*
+* filename: _slidetoggle.scss
+* Author: Enoch Chen
+* Description: Setting
+*
+* ***********************************************/
+.slidetoggle_target { // Assuming hidden by default
+  display: none;
+}
+
+.slidetoggle_controller{ // Assuming a background color change
+  transition: background-color 0.3s ease-in-out;
+}

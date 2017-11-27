@@ -1,12 +1,9 @@
 ---
 layout: page
-title: ENSC Specs Sheet
+title: ENSC Spec Sheet
 comments: false
 modified: 2017-11-24
 ---
-<!-- Interactive javascripts -->
-<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"></script>
-<script src="{{ site.url }}/assets/js/animation/specpage.js"></script>
 
 <!--========================================================-->
 <!--Content nav bar and navigation icon-->
@@ -60,16 +57,20 @@ modified: 2017-11-24
 {% for edu in site.data.about.education %}
 <div class="exp_container">
   <div class="exp_img">
+    {% if {{edu.img}} contains 'http' %}
     <img src="{{edu.img}}" alt="{{edu.school}}" />
+    {% else %}
+    <img src="{{site.url}}/images/{{edu.img}}" alt="{{edu.school}}" />
+    {% endif %}
   </div>
 
   <div class="exp_text">
-    <div class="exp_header">
+    <div class="exp_header slidetoggle_controller">
       <span class="exp_title">{{edu.degree}}</span><span class="exp_expand"></span>
       <a href="{{edu.url}}" class="exp_institute">{{edu.school}}</a>
       <span class="exp_year">{{edu.years}}</span>
     </div>
-    <div class="exp_desc">
+    <div class="exp_desc slidetoggle_target">
       <p>{{edu.description}}</p>
     </div>
   </div>
@@ -82,15 +83,19 @@ modified: 2017-11-24
 {% for exp in site.data.about.research %}
 <div class="exp_container">
   <div class="exp_img">
-    <img src="{{exp.img}}" alt="{{exp.institute}}" />
+    {% if {{exp.img}} contains 'http' %}
+    <img src="{{exp.img}}" alt="{{edu.school}}" />
+    {% else %}
+    <img src="{{site.url}}/images/{{exp.img}}" alt="{{edu.school}}" />
+    {% endif %}
   </div>
   <div class="exp_text">
-    <span class="exp_header">
+    <span class="exp_header slidetoggle_controller">
       <span class="exp_title">{{exp.name}}</span><span class="exp_expand"></span>
     <a href="{{exp.url}}" class="exp_institute">{{exp.institute}}</a>
     <span class="exp_year">{{exp.years}}</span>
     </span>
-    <div class="exp_desc">
+    <div class="exp_desc slidetoggle_target">
       <ul>
         {% for item in exp.details %}
         <li>{{item}}</li>
@@ -108,14 +113,18 @@ modified: 2017-11-24
 {% for exp in site.data.about.miscexp %}
 <div class="exp_container">
   <div class="exp_img">
-    <img src="{{exp.img}}" alt="{{exp.institute}}" />
+    {% if {{exp.img}} contains 'http' %}
+    <img src="{{exp.img}}" alt="{{edu.school}}" />
+    {% else %}
+    <img src="{{site.url}}/images/{{exp.img}}" alt="{{edu.school}}" />
+    {% endif %}
   </div>
   <div class="exp_text">
-    <span class="exp_header">
-            <span class="exp_title"><a href="{{exp.url}}">{{exp.name}}</a></span><span class="exp_expand"></span>
+    <span class="exp_header slidetoggle_controller">
+        <span class="exp_title"><a href="{{exp.url}}">{{exp.name}}</a></span><span class="exp_expand"></span>
     <span class="exp_year">{{exp.years}}</span>
     </span>
-    <div class="exp_desc">
+    <div class="exp_desc slidetoggle_target">
       <ul>
         {% for item in exp.details %}
         <li>{{item}}</li>
@@ -138,7 +147,11 @@ modified: 2017-11-24
     <input type="checkbox" id="tool_{{tool.name}}" />
     <label class="tool_button" for="tool_{{tool.name}}">
     <div class="tool_img_container">
+      {% if {{tool.icon}} contains 'http' %}
       <img src="{{tool.icon}}" alt="{{tool.name}}" />
+      {% else %}
+      <img src="{{site.url}}/images/{{tool.icon}}" alt="{{tool.name}}" />
+      {% endif %}
     </div>
     <div class="tool_stars">
       {% for i in (1..{{tool.stars}}) %} &#9733; {% endfor %}
@@ -183,3 +196,9 @@ modified: 2017-11-24
   </div>
   {% endfor %}
 </div>
+
+
+<!-- Interactive javascripts -->
+<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="{{ site.url }}/assets/js/animation/specpage.js"></script>
+<script src="{{ site.url }}/assets/js/animation/slidetoggle.js"></script>

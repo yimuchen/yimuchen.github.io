@@ -1,69 +1,77 @@
 // Archive time in tags and posts
-
 $tag_img_size: 100px;
 
-.main_tag {
-   list-style: none;
-   padding-left: 0;
+.tag_container {
+  width: 100%;
+  padding-left: 0;
+  margin-top: 5px;
+  display: inline-flex;
 
-   margin-bottom: 20px;
-   margin-top: 20px;
+  .main_tag_img {
+    width: $tag_img_size;
+    float: left;
+    height: 100%;
+    margin: auto;
+    img {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      max-width: 90px;
+      max-height: 90px;
+    }
+  }
 
-   .main_tag_button {
-      width:100%;
+  .main_tag_text {
+    width: 85%;
+    float: right;
+    display: inline-block;
+    background: darken($base-color,1);
+
+    .main_tag_title{
+      width: 100%;
       height: $tag_img_size;
-      background-color: darken($base-color,3);
-      padding:0;
+      line-height: $tag_img_size;
+      text-transform: capitalize;
+      color: $heading-color;
+      font-size: 1.5em;
+      padding-left: 0.5em;
       cursor: pointer;
-      img {
-         vertical-align: middle;
-         width: $tag_img_size;
-         height: $tag_img_size;
-      }
+      background: rgba(0,0,0,0);
+    }
 
-      span {
-         text-transform: Capitalize;
-         color: $heading-color;
+    .main_tag_title.shown{
+      background: darken($base-color,5);
+    }
+    .main_tag_title:hover{
+      background: darken($base-color,5);
+    }
 
-         font-size: 20pt;
-         font-weight: bold;
-         padding-left: 20pt;
-      }
-   }
+  }
 
-   .sub_container {
-      display:none; // Hide by default
-      padding-left: $tag_img_size;
-      background-color: darken($base-color,3);
-   }
 }
 
 .sub_tag {
-   list-style:none;
-   padding: 10px;
-   padding-left: 20pt;
-   background-color: $base-color;
+  width:100%;
+  padding-left: 1.0em;
 
-   .sub_tag_button {
-      text-transform: Capitalize;
-      font-size:16pt;
-      cursor: pointer;
-   }
+  .sub_tag_button {
+    text-transform: Capitalize;
+    max-width: 100%;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin-left: 1.2em;
+    padding:10px;
+    cursor: pointer;
+    background: $base-color;
+    transition: background-color 0.3s ease-in-out;
+  }
 
-   .post_container {
-      display: none; // Hide by default
-      li {
-         font: 14pt;
-         padding: 5px;
-      }
-      padding-bottom: 20px;
-   }
-}
+  .sub_tag_button.shown{
+    background: rgba(0,0,0,0);
+    transition: background-color 0.3s ease-in-out;
+  }
 
-.others_post_container {
-   li {
-      font: 14pt;
-      padding: 5px;
-   }
-   padding-bottom: 20px;
+  .post_container{
+    padding-bottom: 20px;
+  }
+
 }

@@ -1,12 +1,12 @@
 # List of available tags, unlisted will be put under "Others"
 
 - title: thoughts
-  img: thoughts.png
+  img: icon/thoughts.png
   sub_item:
      - computing
 
 - title: Recipes
-  img: recipe.png
+  img: icon/recipe.png
   sub_item:
       - c++
       - boost
@@ -14,7 +14,7 @@
       - root
 
 - title: Physics
-  img: physics.png
+  img: icon/physics.png
   sub_item:
      - Particle Physics
      - Quantum Mechanics
@@ -23,37 +23,36 @@
      - Statistical Mechanics
 
 - title: Mathematics
-  img: math.png
+  img: icon/math.png
   sub_item:
      - Statistics
      - Probability
      - Special functions
-     - Complex 
+     - Complex
      - Number theory
 
 - title: C++
-  img: c_plus_plus.png
+  img: https://isocpp.org/files/img/cpp_logo.png
   sub_item:
      - root
      - boost
-     - python 
+     - python
 
 - title : python
-  img: python.png
+  img: http://icons.iconarchive.com/icons/cornmanthe3rd/plex/128/Other-python-icon.png
   sub_item:
      - pyroot
-     - boost 
-     
+     - boost
+
 - title : root
-  img : root.png
+  img: https://pbs.twimg.com/profile_images/473750696114651136/QzwOMpLo_400x400.png
   sub_item:
      - plotting
      - RooFit
      - pyroot
 
 - title: linux
-  img: archlinux.png
+  img: icon/archlinux.png
   sub_item:
      - shell
      - KDE
-
