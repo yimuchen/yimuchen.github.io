@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to CMSSW part II - First Look at the EDM file format
 description: Understanding how to read and analyze the contents of an EDM file
-tags: [edm, c++, analysis]
+tags: [edm, cmssw, c++, analysis]
 modified: 2016-08-15
 image:
   feature: code_head_1.png
@@ -28,7 +28,7 @@ Type       Module     Label      Process
 double     "myprod"   "Gauss"    "Dummy"   
 int        "myprod"   "Poisson"  "Dummy"   
 ```
-The first column is the C++ type needed to read the variable. The last three strings are related with how this variable was produced. You can think of it as three magic strings that allows you to acces the variable. This dummy file isn't very interesting. Each event contains a `double` variable that is generated according to a Gaussian distribution and an `int` generated according to a Possion distribution. The outputs of a standard `EDM` files is much more interesting:
+The first column is the C++ type needed to read the variable. The last three strings are related with how this variable was produced. You can think of it as three magic strings that allows you to access the variable. This dummy file isn't very interesting. Each event contains a `double` variable that is generated according to a Gaussian distribution and an `int` generated according to a Poisson distribution. The outputs of a standard `EDM` files is much more interesting:
 
 ```
 Type                                  Module                      Label             Process   
@@ -49,7 +49,7 @@ unsigned int                          "bunchSpacingProducer"      ""            
 ```
 where you could see what look to be like physical objects.
 
-To read this file with a main funtion, there are two key classes you will need to use. the [`fwlite::Event`](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26_patch1/doc/html/d0/d3f/classfwlite_1_1Event.html) class and the  [`fwlite::Handle`](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26_patch1/doc/html/d1/dd2/classfwlite_1_1Handle.html) class. The example version of how to use the classes could be given as:
+To read this file with a main function, there are two key classes you will need to use. the [`fwlite::Event`](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26_patch1/doc/html/d0/d3f/classfwlite_1_1Event.html) class and the  [`fwlite::Handle`](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26_patch1/doc/html/d1/dd2/classfwlite_1_1Handle.html) class. The example version of how to use the classes could be given as:
 
 ```cpp
 #include "DataFormats/FWLite/interface/Handle.h"
@@ -101,7 +101,7 @@ As we will see in later tutorials, the EDM file is intuitive to manipulate. You 
 
 that was stored in a large file to produce a new, slimmed and much smaller size file with very intuitive code writing.
 
-In high every physics, un-selected data typically contain up to billions of events, most of which are not particularly interesting to the analysis, and even the events that are considered interesting might contain particles that are uninteresting. The ability to strip down these files to a manageable size is a key step in making analysis work of any kind possible at all.
+In high every physics, unselected data typically contain up to billions of events, most of which are not particularly interesting to the analysis, and even the events that are considered interesting might contain particles that are uninteresting. The ability to strip down these files to a manageable size is a key step in making analysis work of any kind possible at all.
 
 ### Ease of Encapsulation
 As you can see when dumping the contents of an `EDM` file, you could see that entire classes and array of classes could actually be stored inside the file. The ROOT `TTree`s could save classes as well. But to do this is rather finicky.

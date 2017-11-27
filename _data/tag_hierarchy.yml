@@ -4,19 +4,21 @@
   img: icon/thoughts.png
   sub_item:
      - computing
+     - education
 
-- title: Recipes
+- title: recipes
   img: icon/recipe.png
   sub_item:
       - c++
       - boost
       - python
       - root
+      - cmssw
 
 - title: Physics
   img: icon/physics.png
   sub_item:
-     - Particle Physics
+     - particle physics
      - Quantum Mechanics
      - Classical Field Theory
      - Non Linear Dynamics
@@ -25,11 +27,11 @@
 - title: Mathematics
   img: icon/math.png
   sub_item:
-     - Statistics
-     - Probability
-     - Special functions
-     - Complex
-     - Number theory
+     - statistics
+     - probability
+     - special functions
+     - complex
+     - number theory
 
 - title: C++
   img: https://isocpp.org/files/img/cpp_logo.png
@@ -37,18 +39,20 @@
      - root
      - boost
      - python
+     - cmssw
 
 - title : python
   img: http://icons.iconarchive.com/icons/cornmanthe3rd/plex/128/Other-python-icon.png
   sub_item:
      - pyroot
      - boost
+     - cmssw
 
 - title : root
   img: https://pbs.twimg.com/profile_images/473750696114651136/QzwOMpLo_400x400.png
   sub_item:
      - plotting
-     - RooFit
+     - roofit
      - pyroot
 
 - title: linux

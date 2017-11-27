@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to the Confidence Level Diagram
 description: Understanding how to interpret results and simple explanations as to what is being calculated
-tags: [mathematics, statistics, particle physics]
+tags: [mathematics, statistics, physics ,particle physics]
 modified: 2016-07-07
 image:
   feature: thoughts.jpg
@@ -14,8 +14,9 @@ The confidence level diagram is one of the most common form of "conclusion diagr
 Our usual form of conclusion is we say "it is highly unlikely that there is a particle with mass $$X$$ with such and such properties". The conclusion diagram we draw typically look like this:
 
 <figure>
-	<a href="https://ghm.web.cern.ch/ghm/plots/public-results/publications/EXO-15-001/CMS-EXO-15-001_Figure_003-c.pdf"><img src="https://ghm.web.cern.ch/ghm/plots/limitPlot_example.png" alt=""></a>
-	<figcaption>Example diagram from CMS plot style site</figcaption>
+<a href="https://ghm.web.cern.ch/ghm/plots/public-results/publications/EXO-15-001/CMS-EXO-15-001_Figure_003-c.pdf">
+<img src="https://ghm.web.cern.ch/ghm/plots/limitPlot_example.png" alt=""></a>
+<figcaption>Example diagram from CMS plot style site</figcaption>
 </figure>
 
 In this diagram we say that:

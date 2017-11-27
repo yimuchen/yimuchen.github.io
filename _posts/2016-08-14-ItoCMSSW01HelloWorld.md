@@ -69,11 +69,11 @@ The `BuildFile.xml` replaces the `makefile` file to tell the compiler what to co
 
 The binary file that is created would be stored under the `CMSSW_X_X_X/bin/`. The first thing that you could try out is that the you could write multiple main function files in the `Example1/bin` directory provided that the final executable are named differently! Just remember for each new `.cc` you write to add an entry in the `BuildFile.xml`.
 
-It is also worth noting that `xml` is the fully named the [*extensible markup language*](https://en.wikipedia.org/wiki/XML), which is used for storing information in a document in a specific way so that is should be both human and machine readable. Though commonly seen in web application (alongside his famous cousin [`html`](https://en.wikipedia.org/wiki/HTML)), the usage of `xml` files are not limit to such applications only.
+It is also worth noting that `xml` is the fully named the [*extensible markup language*](https://en.wikipedia.org/wiki/XML), which is used for storing information in a document in a specific way so that is should be both human and machine readable. Though commonly seen in web application (alongside his famous cousin [`HTML`](https://en.wikipedia.org/wiki/HTML)), the usage of `xml` files are not limit to such applications only.
 
 Writing a main function is only the first step. If you are the kind of guy that writes analysis code in a single file consisting of a few thousand lines of code, then I can guarantee you that after three weeks without looking at it, the code would become unintelligible, even by the writer. How you write you own libraries and split subroutines into multiple files is on big step for making you code readable. This ties in with the next part we will be looking at, about directories other than `bin` and how to write their corresponding `BuildFile.xml`
 
-## The CMSSW BuildFile structure
+## The CMSSW `BuildFile` structure
 
 Here we take a look at a more complicated structure. One what that might commonly occur:
 

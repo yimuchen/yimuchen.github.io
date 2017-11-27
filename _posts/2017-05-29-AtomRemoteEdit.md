@@ -63,4 +63,4 @@ For a full documentation of the `json` file options, see the [official documenta
 
 One down side of this package is that it currently doesn't use the common `ssh` settings found in the `~/.ssh` directory. Meaning that one cannot edit on machines hidden behind another gateway machine. Another issue is that if you remote locations does not support key-file logins, you will have to leave your password in plain text in the configuration file, something I find incredibley hairy.
 
-All in all, I would say that given the remote machines settings, you may or may not enjoy using this package. For me at least, I was still miles better than running either a sluggish vim that constantly interupts the editting flow or a vim I feel doesn't deliver what it could. 
+All in all, I would say that given the remote machines settings, you may or may not enjoy using this package. For me at least, I was still miles better than running either a sluggish vim that constantly interupts the editting flow or a vim I feel doesn't deliver what it could.

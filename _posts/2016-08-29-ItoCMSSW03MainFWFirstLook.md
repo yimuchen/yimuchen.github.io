@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to CMSSW part III - First look at the CMSSW framework
 description: A first look at altering main function control flows with python files
-tags: [c++, python, CMSSW]
+tags: [c++, python, cmssw]
 modified: 2016-08-29
 image:
   feature: code_head_1.png
@@ -12,7 +12,7 @@ image:
 In this article we are going to explore the (supposed) rational behind why the CMSSW framework is designed as it it, as well as getting a first look at how one could easily alter the contents of a EDM file using this framework. As before all, the concrete code used in this article could be found [here](https://drive.google.com/open?id=0Bw8_U9a0g9nHSG5rMEJWazdLMjQ)
 
 ## Hiding the Loop
-By now, you might have known that the core component of the main function for data processing would center around the  event-by-event for loop, a skeleton code for the main function might look something like:
+By now, you might have known that the core component of the main function for data processing would centre around the  event-by-event for loop, a skeleton code for the main function might look something like:
 
 ```cpp
 // code for opening file
@@ -33,8 +33,8 @@ for( run.toBegin() ; !run.atEnd() ; run++ ){
 
 Now are a few rationals why the framework might want to hide the main loop from the user:
 
-* In mass data processing, the framework might not want to give the user freedom to manipulate the ordering of the for loop.  For example there might be specializations for multi-threading.
-* The framework might what to optimization global object handling, such as the the pointer to handle the event contents.
+* In mass data processing, the framework might not want to give the user freedom to manipulate the ordering of the for loop.  For example there might be specialisation for multi-threading.
+* The framework might what to optimisation global object handling, such as the the pointer to handle the event contents.
 
 When designing the framework, one will still need to give the user an interface to defined calculation flows. One way of doing so would be using the concept of [polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)), which is implemented in C++ as the [virtual function](http://www.cplusplus.com/doc/tutorial/polymorphism/) syntax:
 
@@ -153,9 +153,9 @@ But note that the file opening and saving process are not handled by the `beginS
 
 ### Getting the Handle class
 
-Since the `CMSSW` main framework is designed with fast computing in hand, so the `Handle` class while similar in usage to that we have seen previously, requires slightly different initialization.
+Since the `CMSSW` main framework is designed with fast computing in hand, so the `Handle` class while similar in usage to that we have seen previously, requires slightly different initialisation.
 
-The [`edm::EDGetToken` class](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26/doc/html/de/dba/classedm_1_1EDGetToken.html) is mandatory to be initialized during the constructor via a `consumes()` call, and this is used to get the `Handle` class we will be interested in.
+The [`edm::EDGetToken` class](http://cmsdoxygen.web.cern.ch/cmsdoxygen/CMSSW_8_0_26/doc/html/de/dba/classedm_1_1EDGetToken.html) is mandatory to be initialised during the constructor via a `consumes()` call, and this is used to get the `Handle` class we will be interested in.
 
 ```cpp
 class MyReader : public edm::stream::EDProducer<>

@@ -2,7 +2,7 @@
 layout: post
 title: Customize Latex Commands
 description: How to make your own latex commands and manage them across multiple documentations
-tags: [coding,latex,]
+tags: [coding,latex,recipe]
 modified: 2017-02-17
 image:
   feature: thoughts.jpg
