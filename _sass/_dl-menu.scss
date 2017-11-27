@@ -21,6 +21,7 @@
     top: 0;
     left: 0;
     background: $bg-main;
+    color: $bg-main;
     border: none;
     width: 48px;
     height: 45px;
@@ -47,10 +48,10 @@
     position: absolute;
     width: 68%;
     height: 5px;
-    background: $bg-main;
+    background: $text-color;
     top: 10px;
     left: 16%;
-    box-shadow: 0 10px 0 $bg-main, 0 20px 0 $bg-main;
+    box-shadow: 0 10px 0 $text-color, 0 20px 0 $text-color;
   }
 
   button.dl-active {

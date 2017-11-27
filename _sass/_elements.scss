@@ -67,7 +67,7 @@ svg:not(:root) {
   padding: 8px 20px;
   @include font-rem(14);
   background-color: $primary;
-  color: $bg-main;
+  color: $text-color;
   border-width: 2px !important;
   border-style: solid !important;
   border-color: $primary;
@@ -82,14 +82,14 @@ svg:not(:root) {
 }
 .btn-inverse {
   background-color: $bg-main;
-  color: $primary;
+  color: $text-color;
   border-color: $bg-main;
   &:visited {
     color: $primary;
   }
   &:hover {
     background-color: $primary;
-    color: $bg-main;
+    color: lighten($text-color, 10);
   }
 }
 .btn-success {
