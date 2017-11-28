@@ -12,9 +12,9 @@ image:
 Working on files on a remote server will never be as straight forwards as working with local folders.
 The most straight forward way would be of course to start a remote session on the server and start up a text editing software there.
 This will lead to many complications if you, have grown accustom to multiple text-editing plugins that enhances certain editing experiences.
-For example, [scientific linux](https://www.scientificlinux.org/) version 6, which is still a common distribution on research machines, only ships with [`python2.6`](http://ftp.scientificlinux.org/linux/scientific/6.9/x86_64/os/Packages/) by default, with many of the more fancy plugins for vim requiring at least `python2.7`, sometimes even `python3`.
+For example, [Scientific Linux](https://www.scientificlinux.org/) version 6, which is still a common distribution on research machines, only ships with [`python2.6`](http://ftp.scientificlinux.org/linux/scientific/6.9/x86_64/os/Packages/) by default, with many of the more fancy plugins for vim requiring at least `python2.7`, sometimes even `python3`.
 In this case, one way to patch this would be to compile you own version of the packages required for your favourite text editing environment on your remote machines.
-But not only is this time consuming, additional problems may also occur if your remote machine has floating environment settings, such as loading a new glibc/python path when loading specific packages, which may or may not conflict with your private compiled libraries.
+But not only is this time consuming, additional problems may also occur if your remote machine has floating environment settings, such as loading a new `glibc/python` path when loading specific packages, which may or may not conflict with your private compiled libraries.
 My opinion is that your editing experience should be something that could be set up one your own local machine once, and be shared among all of the projects you are working on, remote or otherwise.
 While the solution provided isn't the silver bullet for solving every use case, it did help me in most of my problems when working on remote projects with my editor of preference: [atom](https://atom.io/).
 
@@ -61,6 +61,6 @@ You can call the command to initiate a first sync via `Remote Sync: Upload folde
 Then you can enjoy the snappiness of local editing while the `uploadOnSave` option automatically save your files remotely as well!
 For a full documentation of the `json` file options, see the [official documentation](https://atom.io/packages/remote-sync).
 
-One down side of this package is that it currently doesn't use the common `ssh` settings found in the `~/.ssh` directory. Meaning that one cannot edit on machines hidden behind another gateway machine. Another issue is that if you remote locations does not support key-file logins, you will have to leave your password in plain text in the configuration file, something I find incredibley hairy.
+One down side of this package is that it currently does not use the common `ssh` settings found in the `~/.ssh` directory. Meaning that one cannot edit on machines hidden behind another gateway machine. Another issue is that if you remote locations does not support key-file logins, you will have to leave your password in plain text in the configuration file, something I find incredibly hairy.
 
-All in all, I would say that given the remote machines settings, you may or may not enjoy using this package. For me at least, I was still miles better than running either a sluggish vim that constantly interupts the editting flow or a vim I feel doesn't deliver what it could.
+All in all, I would say that given the remote machines settings, you may or may not enjoy using this package. For me at least, I was still miles better than running either a sluggish vim that constantly interrupts the editing flow or a vim I feel doesn't deliver what it could.
