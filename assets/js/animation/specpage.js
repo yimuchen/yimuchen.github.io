@@ -65,23 +65,11 @@ $(document).ready(ShowRandom);
 window.setInterval(ShowRandom, 30 * 1000);
 
 
-// Toggling > < section of right navigation bar.
-$(document).ready(function() {
-  $("#spec-nav-button").on("click", function() {
-    var el = $(this);
-    el.text() == el.data("text-swap") ?
-      el.text(el.data("text-original")) :
-      el.text(el.data("text-swap"));
-    el.text() == el.data("text-swap") ?
-      $('[id=spec-nav]').addClass("shown") :
-      $('[id=spec-nav]').removeClass("shown");
-  });
-});
 
 // Class toggle for the right navigation column.
 $(document).ready(function() {
   $('.spec-nav-item').on('click', function() {
-    $('[id=spec-nav]').removeClass('shown');
-    $('[id=spec-nav-button]').text($('[id=spec-nav-button]').data('text-original'));
+    $('.right-nav').removeClass('shown');
+    $('.right-nav-button').text($('.right-nav-button]').data('text-original'));
   });
 });

@@ -37,9 +37,10 @@ timezone:    Asia/Taipei
 future:      true
 highlighter: rouge
 markdown:    kramdown
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-toc
 sass:
   sass_dir: _sass
   style: compressed
@@ -50,6 +51,16 @@ permalink:   /:categories/:title/
 # Amount of post to show on home page
 paginate: 5
 
+# Default setup
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    toc: true
+
+# Additional markdown settings
 kramdown:
    input: GFM
    hard_wrap: false
