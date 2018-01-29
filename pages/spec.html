@@ -57,7 +57,7 @@ modified: 2017-11-24
 {% for edu in site.data.about.education %}
 <div class="exp_container">
   <div class="exp_img">
-    {% if {{edu.img}} contains 'http' %}
+    {% if edu.img contains 'http' %}
     <img src="{{edu.img}}" alt="{{edu.school}}" />
     {% else %}
     <img src="{{site.url}}/images/{{edu.img}}" alt="{{edu.school}}" />
@@ -83,7 +83,7 @@ modified: 2017-11-24
 {% for exp in site.data.about.research %}
 <div class="exp_container">
   <div class="exp_img">
-    {% if {{exp.img}} contains 'http' %}
+    {% if exp.img contains 'http' %}
     <img src="{{exp.img}}" alt="{{edu.school}}" />
     {% else %}
     <img src="{{site.url}}/images/{{exp.img}}" alt="{{edu.school}}" />
@@ -113,7 +113,7 @@ modified: 2017-11-24
 {% for exp in site.data.about.miscexp %}
 <div class="exp_container">
   <div class="exp_img">
-    {% if {{exp.img}} contains 'http' %}
+    {% if exp.img contains 'http' %}
     <img src="{{exp.img}}" alt="{{edu.school}}" />
     {% else %}
     <img src="{{site.url}}/images/{{exp.img}}" alt="{{edu.school}}" />
@@ -147,14 +147,14 @@ modified: 2017-11-24
     <input type="checkbox" id="tool_{{tool.name}}" />
     <label class="tool_button" for="tool_{{tool.name}}">
     <div class="tool_img_container">
-      {% if {{tool.icon}} contains 'http' %}
+      {% if tool.icon contains 'http' %}
       <img src="{{tool.icon}}" alt="{{tool.name}}" />
       {% else %}
       <img src="{{site.url}}/images/{{tool.icon}}" alt="{{tool.name}}" />
       {% endif %}
     </div>
     <div class="tool_stars">
-      {% for i in (1..{{tool.stars}}) %} &#9733; {% endfor %}
+      {% for i in (1 .. tool.stars) %} &#9733; {% endfor %}
     </div>
   </label> {% endfor %}
 

@@ -22,7 +22,7 @@ comments: false
 <div class="tag_container">
   <!-- Image on left hand side -->
   <div class="main_tag_img">
-    {% if {{main_tag.img}} contains 'http' %}
+    {% if main_tag.img contains 'http' %}
     <img src="{{main_tag.img}}" alt="{{main_tag.title}}" />
     {% else %}
     <img src="{{site.url}}/images/{{main_tag.img}}" alt="{{main_tag.title}}" />
