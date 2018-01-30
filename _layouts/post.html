@@ -20,14 +20,16 @@
   <!-- /.entry-header -->
   {% endif %}
 
+  {% if page.toc %}
   <div class="right-nav-button" data-text-original="◀" data-text-swap="▶">
     ◀
   </div>
   <div class="right-nav">
     <div>
-    {{ content | toc_only }}
+    {% include toc.html html=content %}
     </div>
   </div>
+  {% endif %}
 
   <div id="main" role="main">
     <div class="hentry">

@@ -40,7 +40,6 @@ markdown:    kramdown
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-toc
 sass:
   sass_dir: _sass
   style: compressed
