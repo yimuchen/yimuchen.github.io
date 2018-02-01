@@ -293,10 +293,6 @@ header .entry-meta {
       max-width: $max_width;
       margin: 50px auto 30px;
       padding: 50px 80px;
-
-      > p:first-child {
-        @include font-size(20);
-      }
     }
   }
 
