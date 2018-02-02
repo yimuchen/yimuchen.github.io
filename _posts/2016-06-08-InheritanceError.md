@@ -9,7 +9,7 @@ image:
   credit: ensc
 ---
 
-I have recently began to practice designing more general purpose classes for my analysis. Concpetualizing the concept object itself is difficult enough: one needs to avoid both being specific and too general, but over these days of experience with C++'s more obscure syntax and quirks, I really began to see why some might not consider C++ a complete object oriented programming language.
+I have recently began to practice designing more general purpose classes for my analysis. Conceptualising the concept object itself is difficult enough: one needs to avoid both being specific and too general, but over these days of experience with C++'s more obscure syntax and quirks, I really began to see why some might not consider C++ a complete object oriented programming language.
 
 ## The Diamond Problem
 
@@ -71,7 +71,7 @@ d::E.x; // An Independent variable to the one above!
 
 {% endhighlight %}
 
-While this does give most of the flexibility to the user as to what variables are used in an extended inheritance class, this still poses some issues: Since a virtual instance of grandparent class exists, the grandchild class has to explicity call grandparent constructor for initialization ( unless a argument-less constructor exists ). While it seems like a minor feature, it still means that abstraction in not a "opaque" as it should be. For instance, Python tackles this problem by guessing the meaing of `d.x` by the inheritance order during the declaration `class D(B,C,E):`, with the rule of thumb being "First found in DSF searching" and allowing syntax for heirarchy shifting, which makes class design much more intuitive.
+While this does give most of the flexibility to the user as to what variables are used in an extended inheritance class, this still poses some issues: Since a virtual instance of grandparent class exists, the grandchild class has to explicitly call grandparent constructor for initialisation ( unless a argument-less constructor exists ). While it seems like a minor feature, it still means that abstraction in not a "opaque" as it should be. For instance, Python tackles this problem by guessing the meaning of `d.x` by the inheritance order during the declaration `class D(B,C,E):`, with the rule of thumb being "First found in DSF searching" and allowing syntax for hierarchy shifting, which makes class design much more intuitive.
 
 
 ## The missing VTABLE error message
@@ -82,7 +82,7 @@ In function <class>::<constructor>
 undefined reference to vtable for <class>
 ```
 
-as it is annoying uninformative as to what is missing. A simplified view of the `vtable` (or virtual table) is a table of virtual methods that the compiler generates for a class, which is then linked for each class in an inheritance heirarchy. Missing `vtable` may be cause by the following issues:
+as it is annoying uninformative as to what is missing. A simplified view of the `vtable` (or virtual table) is a table of virtual methods that the compiler generates for a class, which is then linked for each class in an inheritance hierarchy. Missing `vtable` may be cause by the following issues:
 
 * The file containing the `vtable` was not included for linking.
 * The `vtable` was not generated. For a `vtable` to be generated, the all instances of reimplemented virtual functions to exists.
@@ -95,4 +95,4 @@ Error: undefined reference to <class>::<method>(<arguments>)
 
 But in the case of methods related to the `vtable` generation, the error messages for missing methods is all compacted into a `missing vtable` and send to look for bugs in the constructor. Not only are you not-told where you bug might be, but it actively tells you to look for somewhere where the bug isn't.
 
-I know that the error messages have been greatly improved in g++6.1. But working in a collaboration, I don't have the luxuary to choose which compiler version I get to use. This is a memo to help me remember what this error message means and how to avoid it in the future.
+I know that the error messages have been greatly improved in g++6.1. But working in a collaboration, I don't have the luxury to choose which compiler version I get to use. This is a memo to help me remember what this error message means and how to avoid it in the future.

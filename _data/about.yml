@@ -41,8 +41,8 @@ research:
     img: http://www.ntu.edu.tw/images/inner/emblem_1.png
     years: June, 2016 - June, 2017
     details:
-      - Contact person for CMS analysis <a href="https://cds.cern.ch/record/2273911/">B2G-16-025</a>. As this is a small group analysis, this included the execution, presentation, editing and defense of the anlaysis throughout the internal review process.
-      - Assited in the development of the CMS pixel DQM software for the<a href="https://github.com/cms-sw/cmssw/tree/master/DQM/SiPixelPhase1Common">pixel phase 1 upgrade</a> (Both for the <a href="https://github.com/cms-sw/cmssw/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Ayimuchen%20">main software suite</a> and the <a href="https://github.com/dmwm/deployment/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Ayimuchen">GUI server</a>.).
+      - Contact person for CMS analysis <a href="https://cds.cern.ch/record/2273911/">B2G-16-025</a>. As this is a small group analysis, this included the execution, presentation, editing and defense of the anlaysis throughout the internal review process. The publication has been submitted to <a href="https://www.journals.elsevier.com/physics-letters-b/">PLB</a>, and is available on <a href="https://arxiv.org/abs/1711.10949">arXiv</a>.
+      - Assited in the development of the CMS pixel DQM software for the <a href="https://github.com/cms-sw/cmssw/tree/master/DQM/SiPixelPhase1Common">pixel phase 1 upgrade</a> (Both for the <a href="https://github.com/cms-sw/cmssw/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Ayimuchen%20">main software suite</a> and the <a href="https://github.com/dmwm/deployment/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Ayimuchen">GUI server</a>.).
       - Other pixel/tracker DQM work at CMS, including offline DQM shift leader, on-call contact, and software on-call expert. More information on the service work conducted could be found <a href="https://icms.cern.ch/epr/showUser/yichen">here</a>.
 
   - name: Research assistant
