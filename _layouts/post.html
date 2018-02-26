@@ -77,7 +77,9 @@
   </div>
   <!-- /.footer-wrapper -->
 
-  {% include scripts.html %} {% if page.comments != false %} {% include comments.html %} {% endif %}
+  {% include scripts.html %}
+  {% include mathjax.html %}
+  {% if page.comments != false %} {% include comments.html %} {% endif %}
 </body>
 
 </html>

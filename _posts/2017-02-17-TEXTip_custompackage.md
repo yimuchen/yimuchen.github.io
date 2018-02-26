@@ -70,7 +70,7 @@ If your are familiar with the use of [macros in C/C++](https://gcc.gnu.org/onlin
 \newcommand{\pair}[1]{\ensuremath{#1\anti{#1}}}
 ```
 
-The `ensuremath` makes sure to load the math typesetting environment for the code withing the curly braces. So the snippet `\pair{c}` will produce \[c\bar{c}\], regardless of where we place the `\pair{c}` code is placed in the latex `$$` braces or not.
+The `ensuremath` makes sure to load the math typesetting environment for the code withing the curly braces. So the snippet `\pair{c}` will produce $c\bar{c}$, regardless of where we place the `\pair{c}` code is placed in the latex dollar braces or not.
 
 Notice that a command can have no arguments, in which case your command is simply a shorthand for a collection of symbols. An example could be if you are constantly dealing with particle and anti-particle pairs, it might be handy to have a shorthand like:
 
