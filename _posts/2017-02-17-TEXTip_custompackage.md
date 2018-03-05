@@ -15,13 +15,14 @@ Have you ever complained that writing complicated equations in latex is painful,
 To get and idea of the power of custom commands, lets start of with an example that might be commonly encountered by physics students. If you have every tried to write partial differential equations in latex, you would know it is incredibly verbose to type out, with the typical fraction form of a first order partial derivative looking something like:
 
 ```tex
-\frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} = \frac{\partial f}{\partial z}
+\frac{\partial f}{\partial x} + \frac{\partial f}{\partial y}
+= \frac{\partial f}{\partial z}
 ```
 
 to produce
 
 $$
-\frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} = \frac{\partial f}{\partial z}
+\pd{f}{x} + \pd{f}{y} = \pd{f}{z}
 $$
 
 which might feel very annoying to type, with far-apart braces, repeating symbols, when the only really input relevant to the final output being `f` and `x`, `y`, `z`.
@@ -83,15 +84,15 @@ to make the `tex` file look more natural.
 Considering that in the final output of
 
 $$
-\text{Consider the production of $\text{t}^{*}\bar{\text{t}}{}^{*}$ in a $\text{p}\bar{\text{p}}$ collision}\\
-\text{with a center-of-mass energy of 100TeV at an integrated luminosity of 100fb$^{-1}$}
+\text{Consider the production of $\text{t}^{*}\bar{\text{t}}{}^{*}$ in $\text{p}\bar{\text{p}}$ collisions}\\
+\text{with a center-of-mass energy of 100$\TeV$ at an integrated luminosity of 100fb$^{-1}$}
 $$
 
 With macros, the raw latex code could look something like
 
-> Consider the production of `\tstarpair` in a `\ppbar` collision  with a center-of-mass energy of 100TeV at an integrated luminosity of 100`\fbinv`
+> Consider the production of `\tstarpair` in `\ppbar` collisions  with a center-of-mass energy of 100TeV at an integrated luminosity of 100`\fbinv`
 
-Rather than the raw latex code that would look like:
+Rather than the raw latex code that looks like:
 
 >> Consider the production of `$\text{t}^{*}\bar{\text{t}}{}^{*}$` in a `$\text{p}\bar{\text{p}}$` collision with a center-of-mass energy of 100TeV at an integrated luminosity of 100`fb$^{-1}$`
 
@@ -119,10 +120,10 @@ A complete documentation of what the `\input` command works can be found on the 
 
 ## Command sharing for files anywhere
 
-Suppose that have designed a [beautiful set of equation shorthands](https://github.com/enochnotsocool/UnixConfig/blob/master/TexSettings/mathHashing.sty) that you want to use for any new project you may be writing. One method is of course putting the `mycommand.tex` file in a fixed location in your computer and always `\input` that file. But lets face it, beginning a file with
+Suppose that one has designed a [beautiful set of equation shorthands](https://github.com/enochnotsocool/UnixConfig/blob/master/TexSettings/mathHashing.sty) that you want to use for any new project you may be writing. One method is of course putting the `mycommand.tex` file in a fixed location in your computer and always `\input` that file. But lets face it, beginning a file with
 
 ```
-\input{/home/ensc/settings/texsetting/mathcommands.tex}
+\input{/home/user/settings/texsetting/mathcommands.tex}
 ```
 
 or even worse:
@@ -141,17 +142,17 @@ C:User\<username>\tex\latex\mathhcommands.sty     # Windows
 And in your latex file, instead of the `\input` command. Use the `\usepackage` command before the beginning of the document body:
 
 ```tex
-\usepackage{mathcommand} % No extention!
+\usepackage{mathcommand} % No filename extentions!
 \begin{document}
 I can use \pd{x}{y} anywhere in the document!
 \end{document}
 ```
 
-Latex packages are of course more than more than a collection of custom commands, you can read about it more on the dedicated wikibook page on [packages](https://en.wikibooks.org/wiki/LaTeX/Creating_Packages). Of course if you consider a user wide `.sty` file overkill, the `.sty` file be used in a single project folder too.
+Latex packages are of course more than more than a collection of custom commands, you can read about it more on the dedicated wikibook page on [packages](https://en.wikibooks.org/wiki/LaTeX/Creating_Packages). Of course if you consider a user-wide `.sty` file overkill, the `.sty` file be used in a single project folder too.
 
 
 ## Caveats of storing file in commands.
-On major problem about using file to store custom commands is that to share the latex code with someone, you can no longer just share the snippet you are using, but you have to share all the file that contains custom commands as well. Depending on the scale of you collaboration, this may or may not be a problem. With the raise of cloud editing platforms such as [sharelatex](https://www.sharelatex.com/), this pain could be reduced without needing to go all out and host a git repositoy for you tex projects.
+One major problem about using file to store custom commands is that to share the latex code with someone, you can no longer just share the snippet you are using, but you have to share all the file that contains custom commands as well. Depending on the scale of you collaboration, this may or may not be a problem. With the raise of cloud editing platforms such as [sharelatex](https://www.sharelatex.com/), this pain could be reduced without needing to go all out and host a git repositoy for you tex projects.
 
 ## Examples of math short-hands
 
@@ -191,11 +192,11 @@ I have been using self defined short-hands for a while. Here are some that I thi
 \newcommand{\con}[2]{\ensuremath{\left< #1 \,,\, #2 \right>}}
 
 %% Functions
-\newcommand{\abs}[1]{\ensuremath{\left| #1 \right|}}
+\newcommand{\abs}[1]{\ensuremath{\left\lvert| #1 \right\rvert}}
 ```
 
-## List of useful documentations:
+## List of useful documentations on latex wikibooks:
 
-* Defining custom commands: https://en.wikibooks.org/wiki/LaTeX/Macros
-* Input command: https://en.wikibooks.org/wiki/LaTeX/Modular_Documents
-* Writing your own package: https://en.wikibooks.org/wiki/LaTeX/Creating_Packages
+* [Defining custom commands](https://en.wikibooks.org/wiki/LaTeX/Macros)
+* [Input command](https://en.wikibooks.org/wiki/LaTeX/Modular_Documents)
+* [Writing your own package](https://en.wikibooks.org/wiki/LaTeX/Creating_Packages)
