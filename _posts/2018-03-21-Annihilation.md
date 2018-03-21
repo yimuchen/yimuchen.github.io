@@ -41,10 +41,10 @@ While never prevalent enough to be intrusive to plot development, it was distrac
 With all that said, these are very generic things that I dislike about "science fiction" Hollywood movies.
 While a more polished writing is desirable, it wasn't what made or break this movie for me, and certainly isn't what made me linger on the question of whether it is a good or bad movie for so long.
 
-One thing that definitely made the movie stand out is the portray and stylising of the mystery surrounding the shimmer, becoming more and more intriguing towards the finale.
+One thing that definitely made the movie stand out is the portray and stylising of the mystery surrounding the shimmer, becoming more and more stylised towards the finale.
 The visual, in the movies own words, "dreamlike... nightmarish... [but] not always", makes Annihilation one of the more visually diverse life-action movies I have seen in a while, while never giving up a uniformed atmosphere for what is the shimmer.
-Be it the more grotesque images with the overgrown marine, or the more serene scenes of the man-trees (tree-people?) and the crystal trees by the lighthouse, these depictions of the shimmer always instilled a sense of unease and unfamiliarity, while also keeping a strange naturalness to how everything looked.
-Even more so towards the end of the movie, where everything about the shimmer is conveyed with extremely minimal dialog.
+Be it the more grotesque images with the overgrown marine, or the more serene scenes of the man-trees (tree-people?) and the crystal trees at the lighthouse, these depictions of the shimmer always instilled a sense of unease and unfamiliarity, while also keeping a strange naturalness to how everything looked.
+The visual style is even more fascinating towards the end of the movie, where everything about the shimmer is conveyed entirely using the visuals with extremely minimal dialog.
 
 <figure>
   <img src="https://i1.wp.com/image.tmdb.org/t/p/w780/mOUJI2rtwAJBNFDs2ZlaqdwylK8.jpg"/>
@@ -53,31 +53,36 @@ Even more so towards the end of the movie, where everything about the shimmer is
 
 All the fantastical visuals in the world, however, would not be relevant if it was not propping up an intriguing underlying theme, and this is where I have been so hesitant to "rate" this movie: at the end of the day, what *is* this movie trying to say?
 
-It's definitely not about saving the world, as whether the world needed saving or if it was saved at all is still left unanswered, and all of the crew is rather indifferent about the matter.
-It's not about self-annihilation, as the destructive tendencies of the crew are never explored beyond that they exist let alone resolved, and is not even the reason for the demise of any of the crew.
-It's not about the consequences of encountering alien life or powers, as the implications of what amoral powerful entities means to the humanity only ever had the theme of destruction and was never explored further than that.
+It's definitely not about saving the world, as whether the world needed saving or if it was saved at all is still left unanswered; not helped by the fact that the entire crew seems rather indifferent about whether the mission succeeds or not.
+It's not about self-annihilation, the destructive tendencies of the crew are never explored beyond the fact that they exist let alone resolved, and is not even the reason for the demise of any of the crew.
+It's not about the consequences of encountering alien life or powers, as the implications of what such a amoral entities means to the humanity only ever had the one theme of destruction and was never explored further than that.
 It's not about the philosophy of individuality, being only touched on in fleeting snippets of dialog towards the end of the movie.
-Could it just a complete jumble of themes loosely tight together by disturbing images and an intentionally [mind-screwy](http://tvtropes.org/pmwiki/pmwiki.php/Main/MindScrew) plot elements, as some critics seemed to have concluded?
+Could it just a complete jumble of themes loosely tied together by disturbing images and an intentionally [mind-screwy](http://tvtropes.org/pmwiki/pmwiki.php/Main/MindScrew) plot elements, as some critics seemed to have concluded?
 
-I, for one, am borderline agreeing with there isn't a point to the story, if it wasn't for another argument that was somewhat jokingly made by my other brother when he tried to search for interpretations of Annihilation, and having seen an interpretation of another (in)famously mind-screw show: [End of Evangelion](http://tvtropes.org/pmwiki/pmwiki.php/Anime/NeonGenesisEvangelion), presented
+I, for one, am borderline agreeing with there isn't a point to the story, if it wasn't for another argument that was somewhat jokingly made by my other brother when he tried to search for interpretations of Annihilation, and having seen an interpretation of another (in)famously mind-screwy movie: [End of Evangelion](http://tvtropes.org/pmwiki/pmwiki.php/Anime/NeonGenesisEvangelion), presented
 by [Folding Idea](https://www.youtube.com/watch?v=NAMAwErYRpQ).
-The take away from the video is that what the show is trying to say, whether intentional or not, could be on a more [meta](https://en.wikipedia.org/wiki/Meta) level then the show itself, attempting to engaging in a different method of conversation with the audience.
-Under this light, one might say that the Annihilation movie itself is a weird self-analysis, constantly merge forms and changing what we expect and even what we want from the movie. Annihilation is challenging the audience to question why they are in fact intrigued by seeing such a movie.
+The take away from the video is: what a media is trying to say, whether intentional or not, could be on a more [meta](https://en.wikipedia.org/wiki/Meta) level then the actual medium itself, attempting to engaging in a different method of conversation with the audience.
+The argument given for Evangelion is that the two strikingly different endings with the protagonist having stark different personas is made to challenge the fans of the show about the reason behind their demanding a alternative ending.
+Under this light, one might say that the Annihilation movie itself is a weird self-analysis, constantly merge forms and changing what we expect --- even what we want from the movie. Annihilation is challenging the audience to question why they are watching such a movie.
 
 <figure>
   <img src="http://img2.looper.com/img/gallery/the-ending-of-annihilation-explained/humanitys-end-could-be-a-good-thing-1519412784.jpg"/>
    <figcaption>
-   The "alien" is in fact the embodiment of the show. It has stunning visuals that is both dreamlike and nightmarish; engaging but at the same time indifferent.
+   This "alien" is in fact the embodiment of what the movieis displayed on the screen. It has stunning visuals that is both dreamlike and nightmarish; engaging but at the same time indifferent.
    After its inevitable termination, we will never know what it wants, or if it wants at all.
    </figcaption>
 </figure>
 
-This is, of course, just a fun idea. End of Evangelion (and Evangelion 3.0) gets off with this meta explanation for it long history of [love--hate relation](http://tvtropes.org/pmwiki/pmwiki.php/Main/FanWank) between its fan-base and its [creator](http://tvtropes.org/pmwiki/pmwiki.php/Creator/HideakiAnno).
+This is, of course, just a idea for laughs. End of Evangelion (and Evangelion 3.0) gets off with this meta explanation for it long history of [love--hate relation](http://tvtropes.org/pmwiki/pmwiki.php/Main/FanWank) between its fan-base and its [creator](http://tvtropes.org/pmwiki/pmwiki.php/Creator/HideakiAnno).
 As a standalone adaption to a single entry in a [science fiction trilogy](http://tvtropes.org/pmwiki/pmwiki.php/Literature/TheSouthernReachTrilogy), and the clunky writing for the first half of the movie, such explanation comes of as somewhat forced, even more so if the creators stepped out to claim it to be so.
 
-It does, however, gives an explanation of why I was personally hooked during the first watching, despite not knowing what I felt about the movie.
+It does, however, gives an explanation of why I was personally hooked during the first watching, despite not knowing how I feel about the movie.
 The build-up is ever changing, and I was forced to constantly reevaluate what I was supposed to expect, especially towards last 30 minutes of the film.
-After the initial hook, and keeping my interest despite the clunky execution during the Southern reach act and the first act inside the Shimmer, it was a roller-coaster of a ride after that, one the doesn't appear often in modern films.
+After the initial hook, and keeping my interest despite the clunky execution during the Southern reach act and the first act inside the Shimmer, it was a roller-coaster of a ride after that: full of swerves with what to expect, but never so abrupt that it feels like being hit on the head.
+In other words, this movie is mind-screw done (mostly) right.
+It must be stressed that mind-screw does not equal intelligent.
+There were nearly no thought-provoking moments or messaged in the movie; not much could be taken away after the credits roll.
+It is the playing with expectation of what *to* expect that makes the movie a rather unique experience.
 
 ---
 
@@ -86,5 +91,6 @@ If I were to say the critic that sums up the movie the best, I would say it is [
 > [Annihilation (2018)] is tightrope-walking the fine line between open-ended, mind-expanding mystery and lethargic, pretentious twaddle.
 
 I would definitely say that for many, it would get stuck in the land of boring, pretentious rambling.
+If the initial hook doesn't make it, then the movie would definitely feel like a flop.
 But I for one am definitely glad that I had the chance to experience it, and greatly appreciate the risks the director took in making this movie what it is.
 Whether this experience is a positive or negative one, it might not matter as much as I had thought.
