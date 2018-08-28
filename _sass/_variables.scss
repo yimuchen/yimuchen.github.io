@@ -1,7 +1,8 @@
 // Typography
 // --------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
-$base-font: 'Lato', Calibri, Arial, sans-serif;
+$base-font: 'Noto Sans', sans-serif;
 $heading-font: $base-font;
 $caption-font: $base-font;
 $code-font: monospace;
