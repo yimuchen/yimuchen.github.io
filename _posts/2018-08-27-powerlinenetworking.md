@@ -60,7 +60,7 @@ than I had thought:
   for a relatively low-power device.
 
 The first two actually limits my choices to rather high-end devices that costs
-around $130 on amazon, but you can look for starter kits for around $35-50,
+around 130USD on amazon, but you can look for starter kits for around 35-50USD,
 depending on the manufacturer if you are willing to give up a few functions. I
 don't regret getting a rather overkill solution, as such supporting speeds also
 future-proofs any potential services upgrades in the future.
