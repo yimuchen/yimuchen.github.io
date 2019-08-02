@@ -41,11 +41,12 @@ function run_combination(input, current_idx) {
     }
   }
   else {
-    var start_idx = 0;
+    var direction = sum_type == parallel ? +1 :  -1 ;
+    var start_idx = sum_type == parallel? 0 : resistor_set.length -1 ;
     if (current_idx > 0) {
       start_idx = resistor_set.indexOf(input[current_idx - 1]);
     }
-    for (var i = start_idx; i < resistor_set.length; ++i) {
+    for (var i = start_idx; i < resistor_set.length && i >= 0 ; i += direction) {
       input[current_idx] = resistor_set[i];
       if (
         ((sum_type == parallel) &&
