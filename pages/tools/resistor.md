@@ -19,8 +19,10 @@ very large amount of memory. To help the algorithm end early, try using a smalle
 tolerance or lower the maximum number of components allowed.
 
 Since I this a tool primarily for my own use. I have loaded in some of the
-components found in the UMDCMS electronics lab. All the code can be found on the
-github repository of this blog.
+components found in the UMDCMS electronics lab. All the
+[code](https://github.com/yimuchen/yimuchen.github.io/blob/master/assets/js/tools/resistor.js)
+can be found on the [github
+repository](https://github.com/yimuchen/yimuchen.github.io) of this blog.
 
 
 <div html="1">
