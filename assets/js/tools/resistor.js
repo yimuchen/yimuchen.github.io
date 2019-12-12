@@ -41,12 +41,12 @@ function run_combination(input, current_idx) {
     }
   }
   else {
-    var direction = sum_type == parallel ? +1 :  -1 ;
-    var start_idx = sum_type == parallel? 0 : resistor_set.length -1 ;
+    var direction = sum_type == parallel ? +1 : -1;
+    var start_idx = sum_type == parallel ? 0 : resistor_set.length - 1;
     if (current_idx > 0) {
       start_idx = resistor_set.indexOf(input[current_idx - 1]);
     }
-    for (var i = start_idx; i < resistor_set.length && i >= 0 ; i += direction) {
+    for (var i = start_idx; i < resistor_set.length && i >= 0; i += direction) {
       input[current_idx] = resistor_set[i];
       if (
         ((sum_type == parallel) &&
@@ -61,19 +61,19 @@ function run_combination(input, current_idx) {
 
 function make_resistance_string(input) {
   mult = input < 1e-9 ? 1e-12 :
-    input < 1e-6 ? 1e-9 :
-      input < 1e-3 ? 1e-6 :
-        input < 1 ? 1e-3 :
-          input < 1e3 ? 1 :
-            input < 1e6 ? 1e3 :
-              input < 1e9 ? 1e6 : 1e9;
+         input < 1e-6 ? 1e-9 :
+         input < 1e-3 ? 1e-6 :
+         input < 1 ? 1e-3 :
+         input < 1e3 ? 1 :
+         input < 1e6 ? 1e3 :
+         input < 1e9 ? 1e6 : 1e9;
   postfix = input < 1e-9 ? 'p' :
-    input < 1e-6 ? 'n' :
-      input < 1e-3 ? 'u' :
-        input < 1e0 ? 'm' :
-          input < 1e3 ? ' ' :
+            input < 1e-6 ? 'n' :
+            input < 1e-3 ? 'u' :
+            input < 1e0 ? 'm' :
+            input < 1e3 ? ' ' :
             input < 1e6 ? 'k' :
-              input < 1e9 ? 'M' : 'G';
+            input < 1e9 ? 'M' : 'G';
   return (input / mult) + postfix;
 
 }
@@ -84,15 +84,14 @@ function resistance_from_string(input) {
   if (multipler_postfix.includes(mult)) {
     input = input.substring(0, input.length - 1)
   }
-  mult
-    = mult == 'p' ? 1e-12 :
-      mult == 'n' ? 1e-9 :
-        mult == 'u' ? 1e-6 :
-          mult == 'm' ? 1e-3 :
-            mult == 'k' ? 1e3 :
-              mult == 'K' ? 1e3 :
-                mult == 'M' ? 1e6 :
-                  mult == 'G' ? 1e9 : 1;
+  mult = mult == 'p' ? 1e-12 :
+         mult == 'n' ? 1e-9 :
+         mult == 'u' ? 1e-6 :
+         mult == 'm' ? 1e-3 :
+         mult == 'k' ? 1e3 :
+         mult == 'K' ? 1e3 :
+         mult == 'M' ? 1e6 :
+         mult == 'G' ? 1e9 : 1;
 
   return temp = Number(input) * mult;
 }
@@ -196,7 +195,7 @@ function update_set() {
   var multipler_postfix = 'pnumkKMG';
   resistor_set = []
   for (var i = 0; i < raw_set.length; ++i) {
-    var temp = resistance_from_string( raw_set[i] );
+    var temp = resistance_from_string(raw_set[i]);
     if (temp == temp && temp > 0) { // NaN and positive check
       resistor_set.push(temp);
     }
@@ -337,7 +336,7 @@ function load_UMD0603_resistor() {
 }
 
 function clear_resistors() {
-  resistor_string = ""
+  resistor_string = ''
   update_set();
 }
 
