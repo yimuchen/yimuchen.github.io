@@ -41,7 +41,7 @@ probably have no idea what I am talking about when it comes to critiquing the
 audio quality. That being said, I really do like the way they sound. Whether it
 is using the 3.5 mm line to connect to my PC/laptop, or using the USB type-C
 cable to use the headphones in built DAC, they both contain significantly more
-details than my previous headset. The 3.5mm cable does make the output quieter
+details than my previous headset. The 3.5 mm cable does make the output quieter
 (the impedance quoted from the product page is 450 Ohms, so most likely the DAC
 on my computer is struggling to drive them), but still within acceptable ranges.
 As to how good they are compared to other headsets, I have no way of comparing,
@@ -60,23 +60,25 @@ see how well it holds up on a plane. From what I can tell, it would reduce the
 noise to a point where it wouldn't need to raise the headphone volume to
 painfully loud volumes for typical usage.
 
-All the good stuff that I enjoyed being said, lets talk about the stuff that made
-me feel rather disappointed with the headphone. The first one I got had a bad
-volume-down button, and an annoying popping sound in the left ear whenever I used
-the headphone in wired mode (either with USB or the 3.5 mm cable). I returned
-this headset for another one, and with the new headset, while the button is now
-good, the popping issue still persists. With the 3.5 mm cable, you can seem to
-mitigate it by tweaking the cable position, but nothing I have tried permanently
-solves this issue. Arguably, this popping noise is very faint and is only
-noticeable when no audio is playing, and isn't always present, but for a high-end
-product, having this sort of bug is really disappointing. Yet another issue is
-that updating the firmware breaks playback over USB in Linux, I have no idea why.
+Now for a random story. When operating in wired mode, whether USB or the 3.5 mm
+audio line, there was a strange popping noise in the left ear. It took me a week
+to work out, but it turns out it as a peculiar ground loop issue with my computer
+and the power-line network unit that somehow only the left ear was picking up.
+Moving the power-line unit to another outlet solved the issue, but I'm not sure
+if this is a quirk of higher end audio gear, or just something with particular
+with the Momentum 3. But that was a strange issue that I needed solving.
 
 ## Open questions and closing words
 
 As of writing, I'm still trying to get Bluetooth to work with Linux, though I am
 still of the mentality that wired operation would always be better than wireless
 operation, so this isn't a bit problem for me, just something I want to complete
-the functionality of my headset. All in all, I would say I am happy with the
-overall experience, but wouldn't recommend this particular headset until I can
-reliably solve the weird popping issue.
+the functionality of my headset. As of writing the problem is nearly solved, but
+still trying to find an easier solution.
+
+All in all, I would say I am happy with the overall experience, but at the same
+time, I have a hard time recommending this particular product, with a weird
+episode of the ground loop taking over a week to diagnose, and the first unit
+that I received had a broken volume down button. As a Linux user, I'm no stranger
+to debugging random issues, but that doesn't make it less frustrating when
+working with the product what I paid a considerable amount to buy.
