@@ -54,7 +54,7 @@ noise still gets in as a slight hiss that slightly audible when there is audio
 playing. This is still very acceptable, as previously when the AC kicks in, I'm
 nearly always tempted to dial up my volume because it in the way of what I was
 listening, whereas now, it is more of a brief pause when the hissing sounds up
-then thinking to myself: “Oh, I guess the AC kicked on”, the moving on. So all in
+then thinking to myself: “Oh, I guess the AC kicked in”, the moving on. So all in
 all, the noise-cancelling is doing its job. My December trip would be the test to
 see how well it holds up on a plane. From what I can tell, it would reduce the
 noise to a point where it wouldn't need to raise the headphone volume to
