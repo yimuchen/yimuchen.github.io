@@ -3,4 +3,7 @@ basic:
    month: August
    year: 1993
    location: Yilan, Taiwan
-   about: I was a physics student studying experimental particle physics, and I am currently apply for a PhD in physics in the same field of study (serving in an obligatory military service as of writing). Fields of interest, part from the obvious particle physics, includes complex systems and computing. Look below for more details!
+   about: "I was a physics student studying experimental particle physics, and I
+   am currently working as a PhD student in physics at the University of
+   Maryland. Fields of interest, part from the obvious particle physics,
+   includes complex systems and computing. Look below for more details!"
