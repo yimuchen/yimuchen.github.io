@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sennheiser Momentum 3 Wireless -- My thoughts
+title: Sennheiser Momentum 3 - My thoughts
 description: My thoughts on my new head phones.
 tags: [hardware, thoughts]
 modified: 2019-12-12
@@ -55,10 +55,16 @@ playing. This is still very acceptable, as previously when the AC kicks in, I'm
 nearly always tempted to dial up my volume because it in the way of what I was
 listening, whereas now, it is more of a brief pause when the hissing sounds up
 then thinking to myself: “Oh, I guess the AC kicked in”, the moving on. So all in
-all, the noise-cancelling is doing its job. My December trip would be the test to
-see how well it holds up on a plane. From what I can tell, it would reduce the
-noise to a point where it wouldn't need to raise the headphone volume to
-painfully loud volumes for typical usage.
+all, the noise-cancelling is doing its job.
+
+\[Update 2019-12-30\] On my plane ride back to Taiwan, the noise cancelling is very
+serviceable, with the low frequency rumbling being clearly blocked out, reducing
+the engine noise to a low volume, higher-pitched faint hissing that is
+unobtrusive to movie viewing experiences and definitely saved ear pains due to
+uncomfortably loud volumes. The office-oriented design of not being able to fold
+flat of the Momentum 3 does make wearing the headphones rather unwieldy without
+putting the headphones away entirely, but it didn't really matter for my using
+habits.
 
 Now for a random story. When operating in wired mode, whether USB or the 3.5 mm
 audio line, there was a strange popping noise in the left ear. It took me a week
@@ -68,13 +74,24 @@ Moving the power-line unit to another outlet solved the issue, but I'm not sure
 if this is a quirk of higher end audio gear, or just something with particular
 with the Momentum 3. But that was a strange issue that I needed solving.
 
+\[Update 2019-12-30\] Another peculiar episode occurred when attempting to
+playback lossless audio files. Weird and irregular popping sounds started
+appearing every 1 minute or so, which indicated to me a buffering problem. It has
+since been fixed using [pulseaudio
+settings](https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Setting_the_default_fragment_number_and_buffer_size_in_PulseAudio),
+but just note that this is yet another issue that one might need to deal with.
+
 ## Open questions and closing words
 
-As of writing, I'm still trying to get Bluetooth to work with Linux, though I am
-still of the mentality that wired operation would always be better than wireless
-operation, so this isn't a bit problem for me, just something I want to complete
-the functionality of my headset. As of writing the problem is nearly solved, but
-still trying to find an easier solution.
+\[Update 2019-12-30\] There is a strange bug that after the firmware update of in
+early December, the Momentum 3 just doesn't work in USB mode with Linux, I
+avoided this thanks to the second unit I got to fix the broken botton. I'm not
+sure if this is fixed in future updates, as the Senheisser mobile app is now
+bugged out with two Momentum devices listed in the app that both cannot be
+connected. I'm happy with the headphone interface as is, so I wouldn't be
+attempting to solve this anytime soon (I'm more old-fashioned when it comes media
+control, and prefer to control everything manually instead of through smart
+gestures or headphone interfaces).
 
 All in all, I would say I am happy with the overall experience, but at the same
 time, I have a hard time recommending this particular product, with a weird
