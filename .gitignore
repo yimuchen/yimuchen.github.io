@@ -9,4 +9,9 @@ Gemfile.lock
 .sass-cache
 
 images/figures/
+images/posts/
+!images/posts/**/*.png
+!images/posts/**/*.jpg
+.vscode/
+
 _drafts/
