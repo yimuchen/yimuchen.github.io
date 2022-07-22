@@ -56,7 +56,8 @@ $$\varepsilon = \oint \vec{E}\cdot d\vec{l}$$
 如果我們要完整的解這個問題，就是需要把我們用的定律完整的寫出來：
 
 - 法拉第定律(積分式)：
-  $$ \oint \vec{E} \cdot d\vec{l} = \frac{d\Phi_B}{dt}$$
+
+$$\oint \vec{E} \cdot d\vec{l} = \frac{d\Phi_B}{dt}$$
 
 - 歐姆定律（電流密度式）：
 
